@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg6" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#181917"/>
+      <stop offset="100%" stop-color="#0f100e"/>
+    </linearGradient>
+    <linearGradient id="terracotta" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#d97757"/>
+      <stop offset="100%" stop-color="#ab4d2f"/>
+    </linearGradient>
+    <filter id="sheetShadow" x="-20%" y="-10%" width="140%" height="130%">
+      <feDropShadow dx="0" dy="16" stdDeviation="20" flood-color="#000000" flood-opacity="0.55"/>
+    </filter>
+  </defs>
+
+  <rect width="800" height="600" fill="url(#bg6)"/>
+
+  <!-- Brand Identity Styleguide Sheet (Landscape 600x420) -->
+  <g transform="translate(100, 85)" filter="url(#sheetShadow)">
+    <rect width="600" height="430" rx="8" fill="#f4f2eb" stroke="#dedad0" stroke-width="1.5"/>
+
+    <!-- Header bar -->
+    <text x="35" y="42" font-family="'Manrope', sans-serif" font-weight="800" font-size="15" fill="#151614" letter-spacing="1">LUMINA ARCHITECTURE</text>
+    <text x="565" y="42" font-family="'DM Sans', sans-serif" font-weight="600" font-size="9" fill="#78756d" text-anchor="end" letter-spacing="2">BRAND GUIDELINES V2.4</text>
+    <line x1="35" y1="58" x2="565" y2="58" stroke="#d5d1c7" stroke-width="1"/>
+
+    <!-- Left Column: Primary Logo & Construction -->
+    <g transform="translate(35, 75)">
+      <rect width="250" height="180" rx="6" fill="#1a1c19"/>
+      
+      <!-- Logo Symbol -->
+      <g transform="translate(125, 80)">
+        <polygon points="0,-45 42,-20 42,30 0,55 -42,30 -42,-20" fill="none" stroke="#f4f2eb" stroke-width="2"/>
+        <polygon points="0,-25 24,-10 24,18 0,32 -24,18 -24,-10" fill="none" stroke="url(#terracotta)" stroke-width="2.5"/>
+        <circle cx="0" cy="4" r="5" fill="#c8ff42"/>
+      </g>
+      <text x="125" y="152" font-family="'Manrope', sans-serif" font-weight="800" font-size="12" fill="#ffffff" text-anchor="middle" letter-spacing="4">LUMINA</text>
+      <text x="125" y="166" font-family="'DM Sans', sans-serif" font-size="7.5" fill="#a09d95" text-anchor="middle" letter-spacing="2">STUDIO ARCHITECTURE</text>
+    </g>
+
+    <!-- Right Column Top: Typography System -->
+    <g transform="translate(310, 75)">
+      <text x="0" y="16" font-family="'Manrope', sans-serif" font-weight="700" font-size="10" fill="#151614" letter-spacing="1.5">TYPOGRAPHY SPECIFICATION</text>
+      <line x1="0" y1="24" x2="255" y2="24" stroke="#d5d1c7" stroke-width="0.8"/>
+      
+      <text x="0" y="46" font-family="'Manrope', sans-serif" font-weight="800" font-size="16" fill="#151614">Manrope Bold / ExtraBold</text>
+      <text x="0" y="62" font-family="'DM Sans', sans-serif" font-size="9" fill="#5e5b54">Aa Bb Cc Dd Ee Ff Gg Hh 0123456789</text>
+
+      <text x="0" y="92" font-family="'DM Sans', sans-serif" font-weight="500" font-size="13" fill="#151614">DM Sans Regular &amp; Medium</text>
+      <text x="0" y="108" font-family="'DM Sans', sans-serif" font-size="9" fill="#5e5b54">The quick brown fox jumps over the lazy dog.</text>
+
+      <text x="0" y="138" font-family="'DM Sans', sans-serif" font-weight="700" font-size="8" fill="#d97757" letter-spacing="1.5">CLEARANCE / SAFE ZONE: 24PX</text>
+      <rect x="0" y="148" width="255" height="18" fill="#e9e5db" rx="3"/>
+      <text x="127" y="161" font-family="'DM Sans', sans-serif" font-size="8" fill="#78756d" text-anchor="middle">Minimum Digital Display Size: 32px</text>
+    </g>
+
+    <!-- Bottom Section: Color Palette Swatches -->
+    <g transform="translate(35, 280)">
+      <text x="0" y="14" font-family="'Manrope', sans-serif" font-weight="700" font-size="10" fill="#151614" letter-spacing="1.5">COLOR SYSTEM &amp; VALUES</text>
+      <line x1="0" y1="22" x2="530" y2="22" stroke="#d5d1c7" stroke-width="0.8"/>
+
+      <!-- Swatch 1: Obsidian -->
+      <g transform="translate(0, 35)">
+        <rect width="95" height="52" rx="4" fill="#1a1c19"/>
+        <text x="8" y="72" font-family="'Manrope', sans-serif" font-weight="700" font-size="8" fill="#151614">Obsidian</text>
+        <text x="8" y="84" font-family="'DM Sans', sans-serif" font-size="7" fill="#78756d">#1A1C19</text>
+      </g>
+
+      <!-- Swatch 2: Terracotta -->
+      <g transform="translate(108, 35)">
+        <rect width="95" height="52" rx="4" fill="#d97757"/>
+        <text x="8" y="72" font-family="'Manrope', sans-serif" font-weight="700" font-size="8" fill="#151614">Terracotta</text>
+        <text x="8" y="84" font-family="'DM Sans', sans-serif" font-size="7" fill="#78756d">#D97757</text>
+      </g>
+
+      <!-- Swatch 3: Sand Paper -->
+      <g transform="translate(216, 35)">
+        <rect width="95" height="52" rx="4" fill="#e5dfd3" stroke="#ccc" stroke-width="0.5"/>
+        <text x="8" y="72" font-family="'Manrope', sans-serif" font-weight="700" font-size="8" fill="#151614">Sand Paper</text>
+        <text x="8" y="84" font-family="'DM Sans', sans-serif" font-size="7" fill="#78756d">#E5DFD3</text>
+      </g>
+
+      <!-- Swatch 4: Acid Lime -->
+      <g transform="translate(324, 35)">
+        <rect width="95" height="52" rx="4" fill="#c8ff42"/>
+        <text x="8" y="72" font-family="'Manrope', sans-serif" font-weight="700" font-size="8" fill="#151614">Acid Lime</text>
+        <text x="8" y="84" font-family="'DM Sans', sans-serif" font-size="7" fill="#78756d">#C8FF42</text>
+      </g>
+
+      <!-- Swatch 5: Pure White -->
+      <g transform="translate(432, 35)">
+        <rect width="95" height="52" rx="4" fill="#ffffff" stroke="#ccc" stroke-width="0.5"/>
+        <text x="8" y="72" font-family="'Manrope', sans-serif" font-weight="700" font-size="8" fill="#151614">Clean White</text>
+        <text x="8" y="84" font-family="'DM Sans', sans-serif" font-size="7" fill="#78756d">#FFFFFF</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- Title Header -->
+  <text x="40" y="50" font-family="'Manrope', sans-serif" font-size="12" font-weight="800" fill="#c8ff42" letter-spacing="2">06 / LOGO CREATIONS &amp; BRANDING</text>
+  <text x="760" y="50" font-family="'DM Sans', sans-serif" font-size="11" font-weight="500" fill="#777" text-anchor="end">COMPLETE IDENTITY SYSTEM</text>
+</svg>

@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg11" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#14151a"/>
+      <stop offset="100%" stop-color="#08090d"/>
+    </linearGradient>
+    <linearGradient id="reelGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff007f"/>
+      <stop offset="50%" stop-color="#7928ca"/>
+      <stop offset="100%" stop-color="#2a0845"/>
+    </linearGradient>
+    <filter id="videoShadow" x="-20%" y="-15%" width="140%" height="130%">
+      <feDropShadow dx="0" dy="20" stdDeviation="22" flood-color="#000000" flood-opacity="0.8"/>
+    </filter>
+  </defs>
+
+  <rect width="800" height="600" fill="url(#bg11)"/>
+
+  <!-- Video Monitor / Player Interface (640x420) -->
+  <g transform="translate(80, 80)" filter="url(#videoShadow)">
+    <rect width="640" height="420" rx="14" fill="#12131a" stroke="#252836" stroke-width="1.5"/>
+
+    <!-- Player Window Top Bar -->
+    <rect width="640" height="38" rx="14 14 0 0" fill="#1b1d28"/>
+    <circle cx="24" cy="19" r="5" fill="#ff5f56"/>
+    <circle cx="40" cy="19" r="5" fill="#ffbd2e"/>
+    <circle cx="56" cy="19" r="5" fill="#27c93f"/>
+    <text x="320" y="24" font-family="'Manrope', sans-serif" font-size="10" font-weight="700" fill="#8f95b2" text-anchor="middle">SHOWCASE REEL 2026 · AFTER EFFECTS / PREMIERE PRO</text>
+
+    <!-- Video Canvas Frame -->
+    <g transform="translate(20, 48)">
+      <rect width="600" height="300" rx="6" fill="url(#reelGrad)"/>
+
+      <!-- Film Grain / Geometric dynamic diagonal rays -->
+      <path d="M 0 0 L 200 0 L 600 300 L 400 300 Z" fill="#ffffff" fill-opacity="0.05"/>
+      <path d="M 100 0 L 250 0 L 450 300 L 300 300 Z" fill="#c8ff42" fill-opacity="0.07"/>
+
+      <!-- Center Kinetic Typography -->
+      <g transform="translate(300, 140)">
+        <text x="0" y="-20" font-family="'Manrope', sans-serif" font-weight="800" font-size="38" fill="#c8ff42" text-anchor="middle" letter-spacing="-1">KINETIC MOTION</text>
+        <text x="0" y="22" font-family="'Manrope', sans-serif" font-weight="800" font-size="38" fill="#ffffff" text-anchor="middle" letter-spacing="-1">INNOVATION</text>
+        <text x="0" y="55" font-family="'DM Sans', sans-serif" font-weight="600" font-size="12" fill="#ffd1ea" text-anchor="middle" letter-spacing="3">TITLE SEQUENCES · 3D ANIMATION · REELS</text>
+      </g>
+
+      <!-- Center Play Button Overlay -->
+      <g transform="translate(300, 80)">
+        <circle cx="0" cy="0" r="32" fill="#11110f" fill-opacity="0.8" stroke="#c8ff42" stroke-width="2"/>
+        <polygon points="-8,-14 16,0 -8,14" fill="#c8ff42"/>
+      </g>
+
+      <!-- Timecode / FPS Badges -->
+      <rect x="20" y="20" width="85" height="24" rx="4" fill="#000000" fill-opacity="0.6"/>
+      <circle cx="32" cy="32" r="4" fill="#ff0055"/>
+      <text x="44" y="36" font-family="'DM Sans', monospace" font-size="10" font-weight="700" fill="#ffffff">REC 4K 60P</text>
+
+      <rect x="500" y="20" width="80" height="24" rx="4" fill="#000000" fill-opacity="0.6"/>
+      <text x="540" y="36" font-family="'DM Sans', monospace" font-size="10" font-weight="700" fill="#c8ff42" text-anchor="middle">01:42 / 03:00</text>
+    </g>
+
+    <!-- Timeline & Controls Bar -->
+    <g transform="translate(20, 360)">
+      <!-- Scrubber track -->
+      <rect width="600" height="6" rx="3" fill="#252836"/>
+      <rect width="360" height="6" rx="3" fill="#c8ff42"/>
+      <circle cx="360" cy="3" r="6" fill="#ffffff"/>
+
+      <!-- Controls row -->
+      <g transform="translate(0, 32)">
+        <!-- Play / Pause icon -->
+        <polygon points="5,0 15,6 5,12" fill="#ffffff"/>
+        <!-- Next track -->
+        <polygon points="30,0 38,6 30,12" fill="#8f95b2"/>
+        <rect x="40" y="0" width="3" height="12" fill="#8f95b2"/>
+
+        <text x="60" y="10" font-family="'DM Sans', sans-serif" font-size="10" font-weight="600" fill="#ffffff">Sample Video Creation Showcase</text>
+
+        <!-- Audio wave indicator -->
+        <g transform="translate(480, 0)">
+          <line x1="0" y1="12" x2="0" y2="4" stroke="#c8ff42" stroke-width="2"/>
+          <line x1="6" y1="12" x2="6" y2="0" stroke="#c8ff42" stroke-width="2"/>
+          <line x1="12" y1="12" x2="12" y2="6" stroke="#c8ff42" stroke-width="2"/>
+          <line x1="18" y1="12" x2="18" y2="2" stroke="#c8ff42" stroke-width="2"/>
+          <line x1="24" y1="12" x2="24" y2="8" stroke="#c8ff42" stroke-width="2"/>
+        </g>
+
+        <!-- Fullscreen icon -->
+        <rect x="580" y="0" width="12" height="12" fill="none" stroke="#8f95b2" stroke-width="1.5"/>
+      </g>
+    </g>
+  </g>
+
+  <!-- Title Header -->
+  <text x="40" y="50" font-family="'Manrope', sans-serif" font-size="12" font-weight="800" fill="#c8ff42" letter-spacing="2">11 / VIDEO SAMPLES &amp; MOTION</text>
+  <text x="760" y="50" font-family="'DM Sans', sans-serif" font-size="11" font-weight="500" fill="#8f95b2" text-anchor="end">MOTION GRAPHICS</text>
+</svg>

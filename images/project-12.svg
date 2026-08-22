@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg12" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#181716"/>
+      <stop offset="100%" stop-color="#0a0a09"/>
+    </linearGradient>
+    <linearGradient id="waveGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff3366"/>
+      <stop offset="50%" stop-color="#ff6b35"/>
+      <stop offset="100%" stop-color="#f7c815"/>
+    </linearGradient>
+    <filter id="eventPosterShadow" x="-20%" y="-10%" width="140%" height="130%">
+      <feDropShadow dx="0" dy="20" stdDeviation="24" flood-color="#000000" flood-opacity="0.7"/>
+    </filter>
+  </defs>
+
+  <rect width="800" height="600" fill="url(#bg12)"/>
+
+  <!-- Event Poster Frame 360x500 -->
+  <g transform="translate(220, 50)" filter="url(#eventPosterShadow)">
+    <rect width="360" height="500" rx="4" fill="#0f0f12" stroke="#25252d" stroke-width="1.5"/>
+
+    <!-- Poster Top Header -->
+    <text x="25" y="38" font-family="'Manrope', sans-serif" font-weight="800" font-size="9" fill="#c8ff42" letter-spacing="2">ANDRADE PRESENTS</text>
+    <text x="335" y="38" font-family="'DM Sans', sans-serif" font-weight="700" font-size="8.5" fill="#a0a0b0" text-anchor="end" letter-spacing="1.5">ABU DHABI · OCT 24-26</text>
+    <line x1="25" y1="48" x2="335" y2="48" stroke="#262630" stroke-width="1"/>
+
+    <!-- Big Event Title -->
+    <text x="25" y="95" font-family="'Manrope', sans-serif" font-weight="800" font-size="44" fill="#ffffff" letter-spacing="-2">ECHO</text>
+    <text x="25" y="132" font-family="'Manrope', sans-serif" font-weight="800" font-size="44" fill="url(#waveGrad)" letter-spacing="-2">FESTIVAL</text>
+    <text x="25" y="152" font-family="'DM Sans', sans-serif" font-weight="600" font-size="10" fill="#a0a0b0" letter-spacing="2">ELECTRONIC MUSIC &amp; DIGITAL ART</text>
+
+    <!-- Graphic Wave Silk Screen Artwork -->
+    <g transform="translate(25, 170)">
+      <rect width="310" height="150" rx="6" fill="#171720"/>
+      <!-- Concentric fluid audio contours -->
+      <path d="M 0 100 Q 75 10 155 70 T 310 40 L 310 150 L 0 150 Z" fill="url(#waveGrad)" opacity="0.85"/>
+      <path d="M 0 120 Q 80 40 160 100 T 310 80 L 310 150 L 0 150 Z" fill="#ff0055" opacity="0.6"/>
+      
+      <!-- Vector Sound Nodes -->
+      <circle cx="155" cy="70" r="18" fill="#11110f" stroke="#c8ff42" stroke-width="2"/>
+      <circle cx="155" cy="70" r="6" fill="#c8ff42"/>
+
+      <text x="20" y="30" font-family="'Manrope', sans-serif" font-weight="800" font-size="18" fill="#ffffff">3 DAYS</text>
+      <text x="20" y="44" font-family="'DM Sans', sans-serif" font-size="8" fill="#c8ff42">4 STAGES · 48 ARTISTS</text>
+    </g>
+
+    <!-- Headliners & Lineup Typography -->
+    <g transform="translate(25, 345)">
+      <text x="0" y="10" font-family="'Manrope', sans-serif" font-weight="800" font-size="11" fill="#ffffff" letter-spacing="1">LINEUP / HEADLINERS</text>
+      <line x1="0" y1="18" x2="310" y2="18" stroke="#262630" stroke-width="0.8"/>
+
+      <text x="0" y="36" font-family="'Manrope', sans-serif" font-weight="700" font-size="10" fill="#c8ff42">SOLARIS WAVE · KINETIC SOUL · MODULAR</text>
+      <text x="0" y="52" font-family="'DM Sans', sans-serif" font-size="9" fill="#e0e0ea">Aura Resonance · SubFreq · Nexus Live · Drift</text>
+      <text x="0" y="68" font-family="'DM Sans', sans-serif" font-size="8" fill="#8c8c9e">+ Immersive 3D Visuals &amp; Spatial Sound Installations</text>
+    </g>
+
+    <!-- Poster Bottom Ticket Bar -->
+    <g transform="translate(25, 435)">
+      <rect width="310" height="40" rx="4" fill="#ff3366"/>
+      <text x="155" y="24" font-family="'Manrope', sans-serif" font-weight="800" font-size="10" fill="#ffffff" text-anchor="middle" letter-spacing="2">PASSES: ECHOFESTIVAL.COM ↗</text>
+    </g>
+  </g>
+
+  <!-- Title Header -->
+  <text x="40" y="50" font-family="'Manrope', sans-serif" font-size="12" font-weight="800" fill="#c8ff42" letter-spacing="2">12 / EVENT'S POSTER</text>
+  <text x="760" y="50" font-family="'DM Sans', sans-serif" font-size="11" font-weight="500" fill="#777" text-anchor="end">SCREENPRINT FESTIVAL POSTER</text>
+</svg>
