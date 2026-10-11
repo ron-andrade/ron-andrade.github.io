@@ -24,9 +24,9 @@ No build tools needed. Either:
 
 ## Replacing the sample artwork
 
-Twelve placeholder designs are included in `images/` (project-01.svg → project-12.svg) covering branding, social, print, packaging, digital and motion — so the grid looks complete immediately. To swap in real work:
+Fourteen real project images are included in `images/` (project-01.jpg → project-14.jpg). To swap in real work:
 
-1. Add your image files to `images/` (SVG, PNG or JPG all work — the grid crops to a 4:3 tile automatically).
+1. Add your image files to `images/` (JPG, PNG or SVG all work — the grid crops to a 4:3 tile automatically).
 2. Open `script.js` and edit the `projects` array at the top: update `title`, `category`, `img` (the filename) and `num` for each entry, or add/remove entries entirely.
 3. Categories used by the filter buttons: `branding`, `social`, `print`, `packaging`, `digital`, `motion`. Keep filenames/categories in sync with the buttons in `index.html` if you add new categories.
 
