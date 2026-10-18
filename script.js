@@ -313,6 +313,13 @@ const videos = [
     poster: 'images/video-01.jpg',
     ratio: 9 / 16,
   },
+   {
+    title: 'Dixie Paper Trading — Logo',
+    desc: 'Logo Animation',
+    src: 'Dixie Paper Trading Logo.mp4',
+    poster: 'Video-02.jpg',
+    ratio: 9 / 16,,
+   },
   // {
   //   title: 'Your video title',
   //   desc: 'One-line description.',
