@@ -7,6 +7,8 @@ const projects = [
     categories: ["social", "print", "digital"],
     section: "Social Media Content",
     img: 'images/project-01.jpg',
+    w: 1024,
+    h: 1536,
     pos: 'top',
     desc: "Bilingual English/Arabic promotional ad presenting Dixie's featured print services — stickers, banners, business cards, gift tags, acrylics, paper bags and tissue boxes — with store hours and a WhatsApp call-to-action.",
     tools: "Portrait promo · English / Arabic",
@@ -21,6 +23,8 @@ const projects = [
     categories: ["packaging", "print"],
     section: "Package",
     img: 'images/project-02.jpg',
+    w: 1586,
+    h: 1682,
     pos: 'center',
     desc: "Label and pouch layouts for Labneh and Cheese Al Bahiya, with nutrition panels, bilingual copy, certification marks and a soft desert-landscape illustration direction.",
     tools: "Labels + pouch layouts · A4 print sheet",
@@ -35,6 +39,8 @@ const projects = [
     categories: ["print", "branding"],
     section: "Menu",
     img: 'images/project-03.jpg',
+    w: 2000,
+    h: 1414,
     pos: 'center',
     desc: "Two-sided bilingual menu: an Arabic product range on one side and an English how-to-use guide on the other, framed by a soft floral border and a calligraphic wordmark.",
     tools: "Double-sided menu · Arabic / English",
@@ -49,6 +55,8 @@ const projects = [
     categories: ["print"],
     section: "Brochure",
     img: 'images/project-04.jpg',
+    w: 2000,
+    h: 1369,
     pos: 'center',
     desc: "Outer spread of a bilingual tri-fold: an empowerment cover with photography, a gold product panel with QR code, and a location map with contact details.",
     tools: "Tri-fold · outside spread",
@@ -63,6 +71,8 @@ const projects = [
     categories: ["print", "digital"],
     section: "Poster",
     img: 'images/project-05.jpg',
+    w: 1415,
+    h: 2000,
     pos: 'top',
     desc: "Illustrated four-step Arabic evacuation guide for schools — stay calm, move in order, cooperate, stay in place — with safety notes and a friendly character-led layout.",
     tools: "50×70 cm poster · Arabic",
@@ -77,6 +87,8 @@ const projects = [
     categories: ["packaging"],
     section: "Package",
     img: 'images/project-06.jpg',
+    w: 1891,
+    h: 769,
     pos: 'center',
     desc: "Wraparound jar label with bilingual nutrition facts, partner and certification marks, a circular brand emblem and a fresh green-hills-and-sky illustration.",
     tools: "Wraparound label · 250 g",
@@ -91,6 +103,8 @@ const projects = [
     categories: ["print"],
     section: "Poster",
     img: 'images/project-07.jpg',
+    w: 1500,
+    h: 2000,
     pos: 'top',
     desc: "Bold, child-friendly library category poster pairing an oversized classification number with Arabic and English titles and a playful learning illustration.",
     tools: "Portrait poster · Arabic / English",
@@ -105,6 +119,8 @@ const projects = [
     categories: ["print"],
     section: "Poster",
     img: 'images/project-08.jpg',
+    w: 1500,
+    h: 2000,
     pos: 'top',
     desc: "Companion poster in the same series, using a friendly brain character, a contrasting deep-blue palette and the same bilingual type system.",
     tools: "Portrait poster · Arabic / English",
@@ -119,6 +135,8 @@ const projects = [
     categories: ["print"],
     section: "Poster",
     img: 'images/project-09.jpg',
+    w: 1415,
+    h: 2000,
     pos: 'top',
     desc: "Bilingual safety poster with a consistent icon system for eleven pool rules, set on a subtle patterned background in the authority's gold and green palette.",
     tools: "Portrait poster · English / Arabic",
@@ -133,6 +151,8 @@ const projects = [
     categories: ["packaging"],
     section: "Package",
     img: 'images/project-10.jpg',
+    w: 1794,
+    h: 1794,
     pos: 'center',
     desc: "Square tub label with nutrition facts, bilingual flavour callout (plain), origin and certification marks, and the Al Bahia emblem over a bright farmland scene.",
     tools: "Square label · 2000 g",
@@ -147,6 +167,8 @@ const projects = [
     categories: ["print"],
     section: "Brochure",
     img: 'images/project-11.jpg',
+    w: 2000,
+    h: 1369,
     pos: 'center',
     desc: "Inside spread with key-product photo strips, goal and cooperation panels, and an icon-led list of workshops, built on a gold-and-green brand palette.",
     tools: "Tri-fold · inside spread",
@@ -161,6 +183,8 @@ const projects = [
     categories: ["print", "branding"],
     section: "Signage",
     img: 'images/project-12.jpg',
+    w: 1257,
+    h: 832,
     pos: 'center',
     desc: "Backlit Arabic and French lettering with a partner-logo panel, shown as a facade signage concept.",
     tools: "Backlit letter signage · Arabic / French",
@@ -175,6 +199,8 @@ const projects = [
     categories: ["branding", "print"],
     section: "Business Card",
     img: 'images/project-13.jpg',
+    w: 2174,
+    h: 651,
     pos: 'center',
     desc: "Double-sided English/Arabic business card with gold accents, icon-led contact details and a QR code.",
     tools: "Double-sided card · 90×55 mm",
@@ -189,6 +215,8 @@ const projects = [
     categories: ["branding", "print"],
     section: "Business Card",
     img: 'images/project-14.jpg',
+    w: 2166,
+    h: 650,
     pos: 'center',
     desc: "Minimal bilingual corporate card with a centered red wordmark, a clean typographic hierarchy and a full regulatory line.",
     tools: "Double-sided card · 90×55 mm",
@@ -205,7 +233,7 @@ let currentFilteredProjects = [...projects];
 function render(filter = 'all') {
   activeFilter = filter;
   const isMotion = filter === 'motion';
-  grid.hidden = isMotion;
+  galleryEl.hidden = isMotion;
   if (motionEl) motionEl.hidden = !isMotion;
   if (!isMotion) stopAllVideos();
   grid.innerHTML = '';
@@ -223,7 +251,7 @@ function render(filter = 'all') {
 
     el.innerHTML = `
       <div class="project-media">
-        <img src="${p.img}" alt="${p.title}" loading="lazy" style="object-position:${p.pos || 'center'}" />
+        <img src="${p.img}" alt="${p.title}" width="${p.w}" height="${p.h}" loading="lazy" />
         <span class="project-num">${p.num}</span>
         <span class="project-expand">EXPAND ↗</span>
       </div>
@@ -426,6 +454,8 @@ if (glow) {
     glow.style.top = e.clientY + 'px';
   });
 }
+
+const galleryEl = grid.parentElement;
 
 // Initial render
 render();

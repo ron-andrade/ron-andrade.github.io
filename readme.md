@@ -56,3 +56,7 @@ Open `script.js` and find the `videos` array. Copy one block and fill it in:
 - `ratio: 9 / 16` for vertical, `16 / 9` for landscape, `1` for square.
 
 The carousel, arrows, dots and swipe update automatically. Videos only play when clicked and pause when you move to another slide. Keep MP4s small (GitHub limit is 100 MB per file).
+
+## Gallery
+
+Sample work is shown as a collage where every design keeps its real shape (nothing is cropped). Each project in `script.js` has `w` and `h` (the image size) — if you add a new project, copy those two numbers from the image's width and height so the layout stays smooth.
