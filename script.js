@@ -340,14 +340,14 @@ const videos = [
     title: 'Haroon_Andrade_Brand',
     desc: 'Logo Animation',
     src: 'videos/Haroon_Andrade_Brand_Intro.mp4',
-    poster: 'images/Video-02.jpg',
+    poster: '',
     ratio: 16 / 9,
    },
   {
     title: 'al-rashid-brand',
     desc: 'Logo Animation',
     src: 'videos/al-rashid-brand-intro.mp4',
-    poster: 'images/Video-02.jpg',
+    poster: '',
     ratio: 16 /9,
    },
   // {
