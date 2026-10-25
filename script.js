@@ -306,6 +306,14 @@ function observe() {
 //   • YouTube   -> set  youtube: 'https://youtu.be/XXXXXXXXXXX'  (thumbnail is automatic)
 //   • ratio: 9 / 16 for vertical videos, 16 / 9 for landscape, 1 for square.
 const videos = [
+ {
+    title: 'Dixie Paper Trading — Profile Ad',
+    desc: 'Al-Rashid-Brand',
+    src: 'videos/al-rashid-brand-intro.mp4',
+    poster: 'images/AlRashid_Thumbnail.png',
+    ratio: 16 / 9,
+  },
+  
   {
     title: 'Dixie Paper Trading — Profile Ad',
     desc: 'Vertical 35-second profile ad for Dixie Paper Trading & Printing Services.',
