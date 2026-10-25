@@ -338,7 +338,7 @@ const videos = [
   {
     title: 'al-rashid-brand-intro.mp4',
     desc: 'Logo Animation',
-    src: 'videos/Dal-rashid-brand-intro.mp4',
+    src: 'videos/al-rashid-brand-intro.mp4',
     poster: 'images/Video-02.jpg',
     ratio: 16 /9,
    },
