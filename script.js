@@ -313,7 +313,13 @@ const videos = [
     poster: 'images/AlRashid_Thumbnail.png',
     ratio: 16 / 9,
   },
-  
+  {
+    title: 'Dixie Paper Trading & Printing Services',
+    desc: 'Dixie Printing Promo',
+    src: 'videos/Dixie_Printing_Promo.mp4',
+    poster: 'images/Dixie_Promo_Thumbnail.png',
+    ratio: 16 / 9,
+  },
   {
     title: 'Dixie Paper Trading — Profile Ad',
     desc: 'Vertical 35-second profile ad for Dixie Paper Trading & Printing Services.',
