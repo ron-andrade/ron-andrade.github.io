@@ -307,9 +307,9 @@ function observe() {
 //   • ratio: 9 / 16 for vertical videos, 16 / 9 for landscape, 1 for square.
 const videos = [
  {
-    title: 'Dixie Paper Trading — Profile Ad',
+    title: 'Al-Rashid-Brand',
     desc: 'Al-Rashid-Brand',
-    src: 'videos/al-rashid-brand-intro.mp4',
+    src: 'videos/AlRashid Ad.mp4',
     poster: 'images/AlRashid_Thumbnail.png',
     ratio: 16 / 9,
   },
@@ -337,14 +337,14 @@ const videos = [
     ratio: 9 / 16,
    },
   {
-    title: 'Haroon_Andrade_Brand_Intro.mp4',
+    title: 'Haroon_Andrade_Brand',
     desc: 'Logo Animation',
     src: 'videos/Haroon_Andrade_Brand_Intro.mp4',
     poster: 'images/Video-02.jpg',
     ratio: 16 / 9,
    },
   {
-    title: 'al-rashid-brand-intro.mp4',
+    title: 'al-rashid-brand',
     desc: 'Logo Animation',
     src: 'videos/al-rashid-brand-intro.mp4',
     poster: 'images/Video-02.jpg',
