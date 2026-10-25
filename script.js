@@ -320,6 +320,26 @@ const videos = [
     poster: 'images/Video-02.jpg',
     ratio: 9 / 16,
    },
+
+  {
+    title: 'Dixie Paper Trading — Logo',
+    desc: 'Logo Animation',
+    src: 'videos/Dixie_Logo_Print_Canada_Vertical.mp4',
+    poster: '',
+    ratio: 9 / 16,
+   },{
+    title: 'Haroon_Andrade_Brand_Intro.mp4',
+    desc: 'Logo Animation',
+    src: 'videos/Haroon_Andrade_Brand_Intro.mp4',
+    poster: '',
+    ratio: 16 / 9,
+   },{
+    title: 'al-rashid-brand-intro.mp4',
+    desc: 'Logo Animation',
+    src: 'videos/Dal-rashid-brand-intro.mp4',
+    poster: '',
+    ratio: 16 /9,
+   },
   // {
   //   title: 'Your video title',
   //   desc: 'One-line description.',
