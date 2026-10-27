@@ -225,281 +225,278 @@ const projects = [
   },
 ];
 
-const grid = document.querySelector('#portfolio');
-let activeFilter = 'all';
-let currentModalIndex = 0;
-let currentFilteredProjects = [...projects];
-
-function render(filter = 'all') {
-  activeFilter = filter;
-  const isMotion = filter === 'motion';
-  galleryEl.hidden = isMotion;
-  if (motionEl) motionEl.hidden = !isMotion;
-  if (!isMotion) stopAllVideos();
-  grid.innerHTML = '';
-  currentFilteredProjects = projects.filter(
-    p => filter === 'all' || p.category === filter || (p.categories && p.categories.includes(filter))
-  );
-
-  currentFilteredProjects.forEach((p, index) => {
-    const el = document.createElement('article');
-    el.className = 'project reveal';
-    el.dataset.category = p.category;
-    el.setAttribute('tabindex', '0');
-    el.setAttribute('role', 'button');
-    el.setAttribute('aria-label', `View ${p.title}`);
-
-    el.innerHTML = `
-      <div class="project-media">
-        <img src="${p.img}" alt="${p.title}" width="${p.w}" height="${p.h}" loading="lazy" />
-        <span class="project-num">${p.num}</span>
-        <span class="project-expand">EXPAND ↗</span>
-      </div>
-      <div class="project-meta">
-        <div class="project-meta-details">
-          <h3>${p.title}</h3>
-          <span class="project-section-tag">${p.section}</span>
-        </div>
-        <span class="cat-badge">${p.category}</span>
-      </div>`;
-
-    el.addEventListener('click', () => openModal(index));
-    el.addEventListener('keydown', e => {
-      if (e.key === 'Enter' || e.key === ' ') {
-        e.preventDefault();
-        openModal(index);
-      }
-    });
-
-    grid.appendChild(el);
-  });
-  observe();
-}
-
-document.querySelectorAll('.filters button').forEach(btn => {
-  btn.addEventListener('click', () => {
-    document.querySelector('.filters .active')?.classList.remove('active');
-    btn.classList.add('active');
-    render(btn.dataset.filter);
-  });
-});
-
-function observe() {
-  const io = new IntersectionObserver(
-    entries => {
-      entries.forEach(e => {
-        if (e.isIntersecting) {
-          e.target.classList.add('visible');
-          io.unobserve(e.target);
-        }
-      });
+// =====================================================================
+// MOTION WORK
+// TO ADD A VIDEO: copy one block into the row where it should appear.
+//   src      full video (with sound), in /videos
+//   preview  short muted loop for hover, in /videos/previews (optional)
+//   poster   still image, in /images/motion
+//   ratio    width / height of the video: 16/9 landscape, 9/16 vertical
+// Rows: every video in a row is shown at the same height.
+// =====================================================================
+const filmRows = [
+  [
+    {
+      title: 'Al Rashid Transport, lifting services film',
+      kind: 'Promo film',
+      length: '60 sec',
+      format: '16:9',
+      lang: 'English',
+      desc: 'A one-minute explainer for a heavy-lift contractor: why planning a lift is hard, the Think. Plan. Lift. process, landmark projects and a call to book a site visit.',
+      src: 'videos/al-rashid-transport-film.mp4',
+      preview: 'videos/previews/al-rashid-transport-film.mp4',
+      poster: 'images/motion/al-rashid-transport-film.jpg',
+      ratio: 16 / 9,
     },
-    { threshold: 0.08 }
-  );
-  document.querySelectorAll('.reveal').forEach(e => io.observe(e));
-}
-
-// ---------- Motion / video carousel ----------
-// TO ADD A VIDEO: copy one block inside `videos` and fill it in.
-//   • MP4 file  -> put the file in /videos and set  src: 'videos/your-file.mp4'
-//                  (optional poster: 'images/your-thumbnail.jpg')
-//   • YouTube   -> set  youtube: 'https://youtu.be/XXXXXXXXXXX'  (thumbnail is automatic)
-//   • ratio: 9 / 16 for vertical videos, 16 / 9 for landscape, 1 for square.
-const videos = [
- {
-    title: 'Al-Rashid-Brand',
-    desc: 'Al-Rashid-Brand',
-    src: 'videos/AlRashid Ad.mp4',
-    poster: 'images/AlRashid_Thumbnail.png',
-    ratio: 16 / 9,
-  },
-  {
-    title: 'Dixie Paper Trading & Printing Services',
-    desc: 'Dixie Printing Promo',
-    src: 'videos/Dixie_Promo_60s_EN_AR.mp4',
-    poster: 'images/Dixie_Promo_Thumbnail.png',
-    ratio: 16 / 9,
-  },
-  {
-    title: 'Dixie Paper Trading — Profile Ad',
-    desc: 'Vertical 35-second profile ad for Dixie Paper Trading & Printing Services.',
-    src: 'videos/dixie_profile_ad.mp4',
-    poster: 'images/video-01.jpg',
-    ratio: 9 / 16,
-  },
-   {
-    title: 'Dixie Paper Trading — Logo',
-    desc: 'Logo Animation',
-    src: 'videos/Dixie Paper Trading Logo.mp4',
-    poster: 'images/Video-02.jpg',
-    ratio: 9 / 16,
-   },
-
-  {
-    title: 'Dixie Paper Trading — Logo',
-    desc: 'Logo Animation',
-    src: 'videos/Dixie_Logo_Print_Canada_Vertical.mp4',
-    poster: 'images/Video-02.jpg',
-    ratio: 9 / 16,
-   },
-  {
-    title: 'Haroon_Andrade_Brand',
-    desc: 'Logo Animation',
-    src: 'videos/Haroon_Andrade_Brand_Intro.mp4',
-    poster: '',
-    ratio: 16 / 9,
-   },
-  {
-    title: 'al-rashid-brand',
-    desc: 'Logo Animation',
-    src: 'videos/al-rashid-brand-intro.mp4',
-    poster: '',
-    ratio: 16 /9,
-   },
-  // {
-  //   title: 'Your video title',
-  //   desc: 'One-line description.',
-  //   youtube: 'https://youtu.be/XXXXXXXXXXX',
-  //   ratio: 16 / 9,
-  // },
+    {
+      title: 'Dixie Paper Trading, bilingual services promo',
+      kind: 'Promo film',
+      length: '60 sec',
+      format: '16:9',
+      lang: 'English and Arabic',
+      desc: 'A service-by-service walkthrough for a print shop, from offset and wide-format printing to custom boxes and invitations, with every line set in both English and Arabic.',
+      src: 'videos/dixie-bilingual-promo.mp4',
+      preview: 'videos/previews/dixie-bilingual-promo.mp4',
+      poster: 'images/motion/dixie-bilingual-promo.jpg',
+      ratio: 16 / 9,
+    },
+  ],
+  [
+    {
+      title: 'Dixie, vertical profile ad',
+      kind: 'Social ad',
+      length: '35 sec',
+      format: '9:16',
+      lang: 'English',
+      desc: 'A vertical ad that plays like an app: upload your artwork, pick a product, get a quote. Built for Instagram Reels and TikTok.',
+      src: 'videos/dixie-profile-ad-vertical.mp4',
+      preview: 'videos/previews/dixie-profile-ad-vertical.mp4',
+      poster: 'images/motion/dixie-profile-ad-vertical.jpg',
+      ratio: 9 / 16,
+    },
+    {
+      title: 'Dixie, print press logo reveal',
+      kind: 'Logo animation',
+      length: '12 sec',
+      format: '9:16',
+      lang: 'No dialogue',
+      desc: 'The logo prints itself: a blank sheet lands under registration marks, misaligned colour plates snap into place and maple leaves scatter.',
+      src: 'videos/dixie-logo-print-reveal.mp4',
+      preview: 'videos/previews/dixie-logo-print-reveal.mp4',
+      poster: 'images/motion/dixie-logo-print-reveal.jpg',
+      ratio: 9 / 16,
+    },
+    {
+      title: 'Dixie, line-drawn logo build',
+      kind: 'Logo animation',
+      length: '5 sec',
+      format: '4:5',
+      lang: 'No dialogue',
+      desc: 'A short sting where the frame draws itself, the maple mark strokes in and the wordmark settles.',
+      src: 'videos/dixie-logo-line-animation.mp4',
+      preview: 'videos/previews/dixie-logo-line-animation.mp4',
+      poster: 'images/motion/dixie-logo-line-animation.jpg',
+      ratio: 400 / 518,
+    },
+  ],
+  [
+    {
+      title: 'Haroon Andrade, logo intro',
+      kind: 'Logo animation',
+      length: '8 sec',
+      format: '16:9',
+      lang: 'No dialogue',
+      desc: 'A crane, a truck and a gear assemble into the HA monogram before the name slides in.',
+      src: 'videos/haroon-andrade-logo-intro.mp4',
+      preview: 'videos/previews/haroon-andrade-logo-intro.mp4',
+      poster: 'images/motion/haroon-andrade-logo-intro.jpg',
+      ratio: 16 / 9,
+    },
+    {
+      title: 'Al Rashid Group, logo reveal',
+      kind: 'Logo animation',
+      length: '7 sec',
+      format: '16:9',
+      lang: 'No dialogue',
+      desc: 'Road lines light up toward the horizon and the company sign swings into place above them.',
+      src: 'videos/al-rashid-group-logo-reveal.mp4',
+      preview: 'videos/previews/al-rashid-group-logo-reveal.mp4',
+      poster: 'images/motion/al-rashid-group-logo-reveal.jpg',
+      ratio: 16 / 9,
+    },
+  ],
 ];
 
-const motionEl = document.querySelector('#motion');
-const mTrack = document.querySelector('#motionTrack');
-const mDots = document.querySelector('#motionDots');
-const mPrev = document.querySelector('.motion-nav.prev');
-const mNext = document.querySelector('.motion-nav.next');
-let mActive = 0;
-const mSlides = [];
+// ---------- helpers ----------
+const $ = (s, el = document) => el.querySelector(s);
+const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
+const saveData = navigator.connection && navigator.connection.saveData;
+const canHover = matchMedia('(hover: hover) and (pointer: fine)').matches;
+const esc = s => String(s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+const kindLabel = { branding: 'Branding', social: 'Social media', print: 'Print', packaging: 'Packaging', digital: 'Digital' };
 
-function ytId(v) {
-  const m = String(v).match(/(?:youtu\.be\/|v=|embed\/|shorts\/)([\w-]{11})/);
-  return m ? m[1] : String(v).trim();
-}
-
-videos.forEach((v, i) => {
-  const id = v.youtube ? ytId(v.youtube) : null;
-  const poster = v.poster || (id ? `https://img.youtube.com/vi/${id}/hqdefault.jpg` : '');
-  const idle = `<img src="${poster}" alt="${v.title}" /><button class="motion-play" aria-label="Play ${v.title}">&#9654;</button>`;
-  const s = document.createElement('article');
-  s.className = 'motion-slide';
-  s.innerHTML = `<div class="motion-frame" style="--r:${v.ratio || 16 / 9}">${idle}</div>
-    <div class="motion-info"><span class="project-num">${String(i + 1).padStart(2, '0')}</span><h3>${v.title}</h3><p>${v.desc || ''}</p></div>`;
-  const frame = s.querySelector('.motion-frame');
-  s.stop = () => { frame.innerHTML = idle; };
-  frame.addEventListener('click', e => {
-    if (frame.querySelector('video, iframe')) return;
-    frame.innerHTML = id
-      ? `<iframe src="https://www.youtube-nocookie.com/embed/${id}?autoplay=1&rel=0&playsinline=1" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen title="${v.title}"></iframe>`
-      : `<video src="${v.src}" poster="${poster}" controls autoplay playsinline></video>`;
-  });
-  mTrack.appendChild(s);
-  mSlides.push(s);
-  const dot = document.createElement('button');
-  dot.className = 'motion-dot' + (i === 0 ? ' active' : '');
-  dot.setAttribute('aria-label', `Go to video ${i + 1}`);
-  dot.addEventListener('click', () => mTrack.scrollTo({ left: i * mTrack.clientWidth, behavior: 'smooth' }));
-  mDots.appendChild(dot);
+// ---------- mobile menu ----------
+const toggle = $('.menu-toggle');
+const menu = $('#site-menu');
+toggle.addEventListener('click', () => {
+  const open = menu.classList.toggle('is-open');
+  toggle.setAttribute('aria-expanded', open);
+  toggle.textContent = open ? 'Close' : 'Menu';
+});
+menu.addEventListener('click', e => {
+  if (e.target.closest('a')) { menu.classList.remove('is-open'); toggle.setAttribute('aria-expanded', 'false'); toggle.textContent = 'Menu'; }
 });
 
-function stopAllVideos() { mSlides.forEach(s => s.stop()); }
-function goTo(dir) { mTrack.scrollBy({ left: dir * mTrack.clientWidth, behavior: 'smooth' }); }
-mPrev?.addEventListener('click', () => goTo(-1));
-mNext?.addEventListener('click', () => goTo(1));
-if (videos.length < 2) { mPrev?.remove(); mNext?.remove(); mDots.remove(); }
+// ---------- hero: print the headline in C, M, Y, then snap to black ----------
+(function registerHeadline() {
+  const h = $('#headline');
+  if (!h || reduceMotion) return;
+  const html = h.innerHTML;
+  h.innerHTML = `<span class="ink">${html}</span>` +
+    ['c', 'm', 'y'].map(p => `<span class="plate ${p}" aria-hidden="true">${html}</span>`).join('');
+  h.classList.add('is-printing');
+  setTimeout(() => { h.classList.remove('is-printing'); h.classList.add('is-printed'); }, 1150);
+})();
 
-let mRaf;
-mTrack?.addEventListener('scroll', () => {
-  cancelAnimationFrame(mRaf);
-  mRaf = requestAnimationFrame(() => {
-    const idx = Math.round(mTrack.scrollLeft / mTrack.clientWidth);
-    if (idx !== mActive) {
-      mSlides[mActive]?.stop();
-      mActive = idx;
-      mDots.querySelectorAll('.motion-dot').forEach((d, i) => d.classList.toggle('active', i === idx));
-    }
+// ---------- work grid ----------
+const grid = $('#portfolio');
+let visibleProjects = projects;
+let artIndex = 0;
+
+function renderWork(filter = 'all') {
+  visibleProjects = projects.filter(p => filter === 'all' || p.category === filter || (p.categories || []).includes(filter));
+  grid.innerHTML = visibleProjects.map((p, i) => `
+    <article class="piece marks">
+      <div class="piece-sheet"><img src="${p.img}" alt="" width="${p.w}" height="${p.h}" loading="lazy" decoding="async"></div>
+      <div class="piece-meta">
+        <h3><button class="piece-open" data-i="${i}" aria-haspopup="dialog">${esc(p.title)}</button></h3>
+        <span class="piece-kind">${esc(p.section)}</span>
+      </div>
+    </article>`).join('');
+}
+grid.addEventListener('click', e => {
+  const piece = e.target.closest('.piece');
+  if (!piece) return;
+  openArt(+piece.querySelector('.piece-open').dataset.i);
+});
+document.querySelectorAll('.filters button').forEach(btn => btn.addEventListener('click', () => {
+  document.querySelectorAll('.filters button').forEach(b => { b.classList.toggle('is-active', b === btn); b.setAttribute('aria-pressed', b === btn); });
+  renderWork(btn.dataset.filter);
+}));
+renderWork();
+
+// ---------- artwork viewer ----------
+const artDialog = $('#artDialog');
+function showArt() {
+  const p = visibleProjects[artIndex];
+  $('#art-img').src = p.img;
+  $('#art-img').alt = p.title;
+  $('#art-kind').textContent = `${p.section}, ${kindLabel[p.category] || p.category}`;
+  $('#art-title').textContent = p.title;
+  $('#art-desc').textContent = p.desc;
+  $('#art-format').textContent = p.tools;
+  $('#art-client').textContent = p.scope;
+}
+function openArt(i) { artIndex = i; showArt(); artDialog.showModal(); }
+function stepArt(d) { artIndex = (artIndex + d + visibleProjects.length) % visibleProjects.length; showArt(); }
+$('#artPrev').addEventListener('click', () => stepArt(-1));
+$('#artNext').addEventListener('click', () => stepArt(1));
+artDialog.addEventListener('keydown', e => {
+  if (e.key === 'ArrowLeft') stepArt(-1);
+  if (e.key === 'ArrowRight') stepArt(1);
+});
+
+// close any viewer with its button or by clicking the backdrop
+document.querySelectorAll('dialog.viewer').forEach(d => {
+  d.addEventListener('click', e => {
+    if (e.target.closest('[data-close]') || e.target === d) d.close();
   });
 });
 
-// Lightbox Modal Logic
-const modal = document.querySelector('#artwork-modal');
-const modalImg = document.querySelector('#modal-img');
-const modalNum = document.querySelector('#modal-num');
-const modalCategory = document.querySelector('#modal-category');
-const modalTitle = document.querySelector('#modal-title');
-const modalDesc = document.querySelector('#modal-desc');
-const modalTools = document.querySelector('#modal-tools');
-const modalScope = document.querySelector('#modal-scope');
-const modalLink = document.querySelector('#modal-link');
-const modalCloseBtn = document.querySelector('.modal-close');
-const modalBackdrop = document.querySelector('.modal-backdrop');
-const modalPrevBtn = document.querySelector('.modal-nav.prev');
-const modalNextBtn = document.querySelector('.modal-nav.next');
-
-function openModal(index) {
-  if (!modal || index < 0 || index >= currentFilteredProjects.length) return;
-  currentModalIndex = index;
-  updateModalContent();
-  modal.classList.add('is-open');
-  modal.setAttribute('aria-hidden', 'false');
-  document.body.style.overflow = 'hidden';
+// ---------- showreel ----------
+const reel = $('#reel');
+const reelToggle = $('#reelToggle');
+function setReel(play) {
+  if (play) reel.play().catch(() => setReel(false)); else reel.pause();
+  reelToggle.textContent = play ? 'Pause reel' : 'Play reel';
+  reelToggle.setAttribute('aria-pressed', !play);
+}
+reelToggle.addEventListener('click', () => setReel(reel.paused));
+if (reduceMotion || saveData) {
+  setReel(false);
+} else {
+  // only spend data on the reel once it is close to the screen
+  new IntersectionObserver(([entry]) => {
+    if (entry.isIntersecting && reelToggle.getAttribute('aria-pressed') === 'false') reel.play().catch(() => setReel(false));
+    else if (!entry.isIntersecting) reel.pause();
+  }, { threshold: 0.25 }).observe(reel);
 }
 
-function closeModal() {
-  if (!modal) return;
-  modal.classList.remove('is-open');
-  modal.setAttribute('aria-hidden', 'true');
-  document.body.style.overflow = '';
+// ---------- film cards ----------
+const filmsEl = $('#films');
+const allFilms = filmRows.flat();
+filmsEl.innerHTML = filmRows.map(row => `
+  <div class="film-row">${row.map(f => {
+    const i = allFilms.indexOf(f);
+    return `
+    <article class="film${f.ratio < 1 ? ' is-tall' : ''}" style="--r:${f.ratio.toFixed(4)}" data-i="${i}">
+      <div class="film-media">
+        <img src="${f.poster}" alt="" loading="lazy" decoding="async">
+        ${f.preview ? `<video muted loop playsinline preload="none" data-src="${f.preview}" aria-hidden="true"></video>` : ''}
+        <span class="film-badge">${esc(f.length)}</span>
+      </div>
+      <div class="film-info">
+        <h3><button class="film-open" aria-haspopup="dialog">${esc(f.title)}</button></h3>
+        <p class="film-meta"><span>${esc(f.kind)}</span><span>${esc(f.format)}</span><span>${esc(f.lang)}</span></p>
+      </div>
+    </article>`;
+  }).join('')}</div>`).join('');
+
+function playPreview(card) {
+  const v = card.querySelector('video');
+  if (!v || reduceMotion || saveData) return;
+  if (!v.src) v.src = v.dataset.src;
+  v.play().then(() => card.classList.add('is-playing')).catch(() => {});
+}
+function stopPreview(card) {
+  const v = card.querySelector('video');
+  if (!v) return;
+  v.pause();
+  card.classList.remove('is-playing');
 }
 
-function updateModalContent() {
-  const item = currentFilteredProjects[currentModalIndex];
-  if (!item) return;
-
-  modalImg.src = item.img;
-  modalImg.alt = item.title;
-  modalNum.textContent = item.num;
-  modalCategory.textContent = item.section;
-  modalTitle.textContent = item.title;
-  modalDesc.textContent = item.desc;
-  modalTools.textContent = item.tools;
-  modalScope.textContent = item.scope;
-  modalLink.href = item.link;
-}
-
-function prevModal() {
-  currentModalIndex = (currentModalIndex - 1 + currentFilteredProjects.length) % currentFilteredProjects.length;
-  updateModalContent();
-}
-
-function nextModal() {
-  currentModalIndex = (currentModalIndex + 1) % currentFilteredProjects.length;
-  updateModalContent();
-}
-
-if (modalCloseBtn) modalCloseBtn.addEventListener('click', closeModal);
-if (modalBackdrop) modalBackdrop.addEventListener('click', closeModal);
-if (modalPrevBtn) modalPrevBtn.addEventListener('click', prevModal);
-if (modalNextBtn) modalNextBtn.addEventListener('click', nextModal);
-
-window.addEventListener('keydown', e => {
-  if (!modal || !modal.classList.contains('is-open')) return;
-  if (e.key === 'Escape') closeModal();
-  if (e.key === 'ArrowLeft') prevModal();
-  if (e.key === 'ArrowRight') nextModal();
-});
-
-// Cursor Glow
-const glow = document.querySelector('.cursor-glow');
-if (glow) {
-  window.addEventListener('pointermove', e => {
-    glow.style.left = e.clientX + 'px';
-    glow.style.top = e.clientY + 'px';
+const cards = [...filmsEl.querySelectorAll('.film')];
+if (canHover) {
+  cards.forEach(c => {
+    c.addEventListener('pointerenter', () => playPreview(c));
+    c.addEventListener('pointerleave', () => stopPreview(c));
+    c.addEventListener('focusin', () => playPreview(c));
+    c.addEventListener('focusout', () => stopPreview(c));
   });
+} else {
+  // touch screens: play the previews that are mostly in view
+  const io = new IntersectionObserver(entries => entries.forEach(e =>
+    e.isIntersecting ? playPreview(e.target) : stopPreview(e.target)), { threshold: 0.7 });
+  cards.forEach(c => io.observe(c));
 }
 
-const galleryEl = grid.parentElement;
-
-// Initial render
-render();
-observe();
+// ---------- film player ----------
+const filmDialog = $('#filmDialog');
+const stage = $('#film-stage');
+filmsEl.addEventListener('click', e => {
+  const card = e.target.closest('.film');
+  if (!card) return;
+  const f = allFilms[+card.dataset.i];
+  cards.forEach(stopPreview);
+  if (!reel.paused) reel.pause();
+  stage.innerHTML = `<video src="${f.src}" poster="${f.poster}" controls autoplay playsinline></video>`;
+  stage.style.aspectRatio = '';
+  $('#film-kind').textContent = `${f.kind}, ${f.length}, ${f.format}`;
+  $('#film-title').textContent = f.title;
+  $('#film-desc').textContent = f.desc;
+  filmDialog.showModal();
+});
+filmDialog.addEventListener('close', () => {
+  stage.innerHTML = '';
+  if (!reduceMotion && !saveData && reelToggle.getAttribute('aria-pressed') === 'false') reel.play().catch(() => {});
+});
