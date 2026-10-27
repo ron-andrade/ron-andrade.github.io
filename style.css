@@ -246,3 +246,7 @@ main{overflow-x:clip}
   html{scroll-behavior:auto}
   *,*::before,*::after{animation:none!important;transition:none!important}
 }
+
+/* keep the page still while a viewer is open */
+html.is-locked{overflow:hidden}
+.piece-sheet picture{display:block}

@@ -363,11 +363,23 @@ const grid = $('#portfolio');
 let visibleProjects = projects;
 let artIndex = 0;
 
+// The grid shows small copies from images/grid/ (made from the full image,
+// 480 and 800 px wide). The full-size file is only loaded in the viewer.
+// If a small copy is missing, the full image is used instead.
+function gridImage(p) {
+  const base = p.img.replace(/^images\/(.+)\.\w+$/, 'images/grid/$1');
+  const fallback = `this.onerror=null;this.parentNode.querySelector('source')?.remove();this.src='${p.img}'`;
+  return `<picture>
+      <source type="image/webp" srcset="${base}-480.webp 480w, ${base}-800.webp 800w" sizes="(max-width: 700px) 48vw, 360px">
+      <img src="${base}-800.jpg" alt="" width="${p.w}" height="${p.h}" loading="lazy" decoding="async" onerror="${fallback}">
+    </picture>`;
+}
+
 function renderWork(filter = 'all') {
   visibleProjects = projects.filter(p => filter === 'all' || p.category === filter || (p.categories || []).includes(filter));
   grid.innerHTML = visibleProjects.map((p, i) => `
     <article class="piece marks">
-      <div class="piece-sheet"><img src="${p.img}" alt="" width="${p.w}" height="${p.h}" loading="lazy" decoding="async"></div>
+      <div class="piece-sheet">${gridImage(p)}</div>
       <div class="piece-meta">
         <h3><button class="piece-open" data-i="${i}" aria-haspopup="dialog">${esc(p.title)}</button></h3>
         <span class="piece-kind">${esc(p.section)}</span>
@@ -397,7 +409,7 @@ function showArt() {
   $('#art-format').textContent = p.tools;
   $('#art-client').textContent = p.scope;
 }
-function openArt(i) { artIndex = i; showArt(); artDialog.showModal(); }
+function openArt(i) { artIndex = i; showArt(); artDialog.showModal(); lockPage(); }
 function stepArt(d) { artIndex = (artIndex + d + visibleProjects.length) % visibleProjects.length; showArt(); }
 $('#artPrev').addEventListener('click', () => stepArt(-1));
 $('#artNext').addEventListener('click', () => stepArt(1));
@@ -406,12 +418,19 @@ artDialog.addEventListener('keydown', e => {
   if (e.key === 'ArrowRight') stepArt(1);
 });
 
-// close any viewer with its button or by clicking the backdrop
+// close any viewer with its button or by clicking outside it,
+// and keep the page behind from scrolling while it is open
 document.querySelectorAll('dialog.viewer').forEach(d => {
   d.addEventListener('click', e => {
-    if (e.target.closest('[data-close]') || e.target === d) d.close();
+    if (e.target.closest('[data-close]')) return d.close();
+    if (e.target !== d) return;
+    const r = d.getBoundingClientRect();
+    const outside = e.clientX < r.left || e.clientX > r.right || e.clientY < r.top || e.clientY > r.bottom;
+    if (outside) d.close();
   });
+  d.addEventListener('close', () => document.documentElement.classList.remove('is-locked'));
 });
+const lockPage = () => document.documentElement.classList.add('is-locked');
 
 // ---------- showreel ----------
 const reel = $('#reel');
@@ -426,6 +445,9 @@ if (reduceMotion || saveData) {
   setReel(false);
 } else {
   // only spend data on the reel once it is close to the screen
+  new IntersectionObserver(([entry], io) => {
+    if (entry.isIntersecting) { reel.preload = 'auto'; io.disconnect(); }
+  }, { rootMargin: '800px 0px' }).observe(reel);
   new IntersectionObserver(([entry]) => {
     if (entry.isIntersecting && reelToggle.getAttribute('aria-pressed') === 'false') reel.play().catch(() => setReel(false));
     else if (!entry.isIntersecting) reel.pause();
@@ -495,6 +517,7 @@ filmsEl.addEventListener('click', e => {
   $('#film-title').textContent = f.title;
   $('#film-desc').textContent = f.desc;
   filmDialog.showModal();
+  lockPage();
 });
 filmDialog.addEventListener('close', () => {
   stage.innerHTML = '';

@@ -28,6 +28,7 @@ python3 -m http.server 8000
 2. In `script.js`, copy one block in the `projects` array and fill it in.
 3. Set `w` and `h` to the image's width and height in pixels so the grid doesn't jump while loading.
 4. `category` is the main filter; `categories` lists every filter it should appear under: `branding`, `social`, `print`, `packaging`, `digital`.
+5. Optional, for speed: the grid loads small copies from `images/grid/` named `<name>-480.webp`, `<name>-800.webp` and `<name>-800.jpg` (480 and 800 px wide). If they're missing, the grid falls back to the full image, so a new piece still works without them.
 
 ## Adding a video to the Motion section
 
