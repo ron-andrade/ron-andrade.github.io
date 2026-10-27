@@ -316,7 +316,7 @@ const videos = [
   {
     title: 'Dixie Paper Trading & Printing Services',
     desc: 'Dixie Printing Promo',
-    src: 'videos/Dixie_Printing_Promo.mp4',
+    src: 'videos/Dixie_Promo_60s_EN_AR.mp4',
     poster: 'images/Dixie_Promo_Thumbnail.png',
     ratio: 16 / 9,
   },
