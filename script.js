@@ -260,6 +260,18 @@ const filmRows = [
       poster: 'images/motion/dixie-bilingual-promo.jpg',
       ratio: 16 / 9,
     },
+    {
+      title: 'Harbour View, apartment listing film',
+      kind: 'Promo film',
+      length: '60 sec',
+      format: '16:9',
+      lang: 'English',
+      desc: 'An illustrated listing film for a two-bedroom harbour-view apartment: the skyline reveal, an animated floor plan, interior highlights, a walkable-distance map, amenities and a viewing call-to-action. A concept piece.',
+      src: 'videos/harbour-view-unit-2304.mp4',
+      preview: 'videos/previews/harbour-view-unit-2304.mp4',
+      poster: 'images/motion/harbour-view-unit-2304.jpg',
+      ratio: 16 / 9,
+    },
   ],
   [
     {
