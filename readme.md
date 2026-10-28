@@ -49,4 +49,4 @@ Use `scale=360:-2` and `scale=540:-2` for vertical videos. Keep each file under 
 
 ## Deploying
 
-GitHub Pages: Settings → Pages → Deploy from branch → `main`, `/ (root)`. The site goes live at `https://ronss11.github.io/ronPort/`.
+GitHub Pages: Settings → Pages → Deploy from branch → `main`, `/ (root)`. The site goes live at `https://ron-andrade.github.io/`.
