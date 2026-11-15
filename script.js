@@ -1,8 +1,8 @@
 const projects = [
   {
     id: 1,
-    num: '01',
-    title: "Dixie Paper Trading — Bilingual Service Promo",
+    short: "Print shop promo",
+    title: "Print shop, bilingual service promo",
     category: 'social',
     categories: ["social", "print", "digital"],
     section: "Social Media Content",
@@ -10,15 +10,15 @@ const projects = [
     w: 1024,
     h: 1536,
     pos: 'top',
-    desc: "Bilingual English/Arabic promotional ad presenting Dixie's featured print services — stickers, banners, business cards, gift tags, acrylics, paper bags and tissue boxes — with store hours and a WhatsApp call-to-action.",
+    desc: "Bilingual English/Arabic promotional ad presenting a print shop's featured services — stickers, banners, business cards, gift tags, acrylics, paper bags and tissue boxes — with store hours and a WhatsApp call-to-action.",
     tools: "Portrait promo · English / Arabic",
-    scope: "Dixie Paper Trading & Printing Services",
+    scope: "Print shop, Abu Dhabi",
     link: 'https://sites.google.com/view/andrade-ron/samples',
   },
   {
     id: 2,
-    num: '02',
-    title: "Labneh & Cheese Al Bahiya Packaging Set",
+    short: "Dairy packaging set",
+    title: "Labneh and cheese packaging set",
     category: 'packaging',
     categories: ["packaging", "print"],
     section: "Package",
@@ -26,15 +26,15 @@ const projects = [
     w: 1586,
     h: 1682,
     pos: 'center',
-    desc: "Label and pouch layouts for Labneh and Cheese Al Bahiya, with nutrition panels, bilingual copy, certification marks and a soft desert-landscape illustration direction.",
+    desc: "Label and pouch layouts for a labneh and cheese range, with nutrition panels, bilingual copy, certification marks and a soft desert-landscape illustration direction.",
     tools: "Labels + pouch layouts · A4 print sheet",
-    scope: "Zayed Authority · Made by People with Determination",
+    scope: "Dairy brand, UAE",
     link: 'https://sites.google.com/view/andrade-ron/samples',
   },
   {
     id: 3,
-    num: '03',
-    title: "Lily Glow — Product Menu & Usage Guide",
+    short: "Skincare menu",
+    title: "Skincare product menu and usage guide",
     category: 'print',
     categories: ["print", "branding"],
     section: "Menu",
@@ -44,13 +44,13 @@ const projects = [
     pos: 'center',
     desc: "Two-sided bilingual menu: an Arabic product range on one side and an English how-to-use guide on the other, framed by a soft floral border and a calligraphic wordmark.",
     tools: "Double-sided menu · Arabic / English",
-    scope: "Lily Glow Skin & Body Care",
+    scope: "Skincare brand, UAE",
     link: 'https://sites.google.com/view/andrade-ron/samples',
   },
   {
     id: 4,
-    num: '04',
-    title: "Tri-Fold Brochure — Cover & Contact Panels",
+    short: "Tri-fold brochure, cover",
+    title: "Tri-fold brochure, cover and contact panels",
     category: 'print',
     categories: ["print"],
     section: "Brochure",
@@ -60,13 +60,13 @@ const projects = [
     pos: 'center',
     desc: "Outer spread of a bilingual tri-fold: an empowerment cover with photography, a gold product panel with QR code, and a location map with contact details.",
     tools: "Tri-fold · outside spread",
-    scope: "Zayed Authority for People of Determination",
+    scope: "Public organisation, UAE",
     link: 'https://sites.google.com/view/andrade-ron/samples',
   },
   {
     id: 5,
-    num: '05',
-    title: "Safe Area Evacuation Instructions",
+    short: "Evacuation poster",
+    title: "Safe area evacuation instructions",
     category: 'print',
     categories: ["print", "digital"],
     section: "Poster",
@@ -76,13 +76,13 @@ const projects = [
     pos: 'top',
     desc: "Illustrated four-step Arabic evacuation guide for schools — stay calm, move in order, cooperate, stay in place — with safety notes and a friendly character-led layout.",
     tools: "50×70 cm poster · Arabic",
-    scope: "Zayed Authority · EHS Department",
+    scope: "Public organisation, UAE",
     link: 'https://sites.google.com/view/andrade-ron/samples',
   },
   {
     id: 6,
-    num: '06',
-    title: "Al Bahia Lebneh — 250 g Jar Label",
+    short: "Labneh jar label",
+    title: "Labneh jar label, 250 g",
     category: 'packaging',
     categories: ["packaging"],
     section: "Package",
@@ -92,13 +92,13 @@ const projects = [
     pos: 'center',
     desc: "Wraparound jar label with bilingual nutrition facts, partner and certification marks, a circular brand emblem and a fresh green-hills-and-sky illustration.",
     tools: "Wraparound label · 250 g",
-    scope: "Zayed Authority · Made by People with Determination",
+    scope: "Dairy brand, UAE",
     link: 'https://sites.google.com/view/andrade-ron/samples',
   },
   {
     id: 7,
-    num: '07',
-    title: "Library Category Poster — 000 General Knowledge",
+    short: "Library poster, 000",
+    title: "Library category poster, 000 General Knowledge",
     category: 'print',
     categories: ["print"],
     section: "Poster",
@@ -113,8 +113,8 @@ const projects = [
   },
   {
     id: 8,
-    num: '08',
-    title: "Library Category Poster — 100 Philosophy & Psychology",
+    short: "Library poster, 100",
+    title: "Library category poster, 100 Philosophy and Psychology",
     category: 'print',
     categories: ["print"],
     section: "Poster",
@@ -129,8 +129,8 @@ const projects = [
   },
   {
     id: 9,
-    num: '09',
-    title: "Swimming Pool Rules & Regulations",
+    short: "Pool rules poster",
+    title: "Swimming pool rules and regulations",
     category: 'print',
     categories: ["print"],
     section: "Poster",
@@ -138,15 +138,15 @@ const projects = [
     w: 1415,
     h: 2000,
     pos: 'top',
-    desc: "Bilingual safety poster with a consistent icon system for eleven pool rules, set on a subtle patterned background in the authority's gold and green palette.",
+    desc: "Bilingual safety poster with a consistent icon system for eleven pool rules, set on a subtle patterned background in a gold and green palette.",
     tools: "Portrait poster · English / Arabic",
-    scope: "Zayed Authority · EHS Department",
+    scope: "Public organisation, UAE",
     link: 'https://sites.google.com/view/andrade-ron/samples',
   },
   {
     id: 10,
-    num: '10',
-    title: "Al Bahia Lebneh — 2 kg Tub Label",
+    short: "Labneh tub label",
+    title: "Labneh tub label, 2 kg",
     category: 'packaging',
     categories: ["packaging"],
     section: "Package",
@@ -154,15 +154,15 @@ const projects = [
     w: 1794,
     h: 1794,
     pos: 'center',
-    desc: "Square tub label with nutrition facts, bilingual flavour callout (plain), origin and certification marks, and the Al Bahia emblem over a bright farmland scene.",
+    desc: "Square tub label with nutrition facts, bilingual flavour callout (plain), origin and certification marks, and the brand emblem over a bright farmland scene.",
     tools: "Square label · 2000 g",
-    scope: "Zayed Higher Organization for People of Determination",
+    scope: "Dairy brand, UAE",
     link: 'https://sites.google.com/view/andrade-ron/samples',
   },
   {
     id: 11,
-    num: '11',
-    title: "Tri-Fold Brochure — Inside Spread",
+    short: "Tri-fold brochure, inside",
+    title: "Tri-fold brochure, inside spread",
     category: 'print',
     categories: ["print"],
     section: "Brochure",
@@ -172,13 +172,13 @@ const projects = [
     pos: 'center',
     desc: "Inside spread with key-product photo strips, goal and cooperation panels, and an icon-led list of workshops, built on a gold-and-green brand palette.",
     tools: "Tri-fold · inside spread",
-    scope: "Zayed Authority for People of Determination",
+    scope: "Public organisation, UAE",
     link: 'https://sites.google.com/view/andrade-ron/samples',
   },
   {
     id: 12,
-    num: '12',
-    title: "Lycée Louis Massignon — Illuminated Signage",
+    short: "School signage",
+    title: "School illuminated signage",
     category: 'print',
     categories: ["print", "branding"],
     section: "Signage",
@@ -193,8 +193,8 @@ const projects = [
   },
   {
     id: 13,
-    num: '13',
-    title: "Business Card — FUTURE for Advanced Research & Studies",
+    short: "Research centre card",
+    title: "Research centre business card",
     category: 'branding',
     categories: ["branding", "print"],
     section: "Business Card",
@@ -204,13 +204,13 @@ const projects = [
     pos: 'center',
     desc: "Double-sided English/Arabic business card with gold accents, icon-led contact details and a QR code.",
     tools: "Double-sided card · 90×55 mm",
-    scope: "FUTURE for Advanced Research & Studies",
+    scope: "Research centre",
     link: 'https://sites.google.com/view/andrade-ron/samples',
   },
   {
     id: 14,
-    num: '14',
-    title: "Business Card — Ardian",
+    short: "Investment firm card",
+    title: "Investment firm business card",
     category: 'branding',
     categories: ["branding", "print"],
     section: "Business Card",
@@ -220,124 +220,127 @@ const projects = [
     pos: 'center',
     desc: "Minimal bilingual corporate card with a centered red wordmark, a clean typographic hierarchy and a full regulatory line.",
     tools: "Double-sided card · 90×55 mm",
-    scope: "Ardian",
+    scope: "Investment firm",
     link: 'https://sites.google.com/view/andrade-ron/samples',
   },
 ];
 
+
 // =====================================================================
-// MOTION WORK
+// MOTION WORK, split by kind. Each group gets its own heading on the page.
 // TO ADD A VIDEO: copy one block into the row where it should appear.
 //   src      full video (with sound), in /videos
 //   preview  short muted loop for hover, in /videos/previews (optional)
 //   poster   still image, in /images/motion
-//   ratio    width / height of the video: 16/9 landscape, 9/16 vertical
+//   ratio    width / height of the video: 16/9 landscape, 9/16 vertical, 1 square
 // Rows: every video in a row is shown at the same height.
 // =====================================================================
-const filmRows = [
-  [
-    {
-      title: 'Al Rashid Transport, lifting services film',
-      kind: 'Promo film',
-      length: '60 sec',
-      format: '16:9',
-      lang: 'English',
-      desc: 'A one-minute explainer for a heavy-lift contractor: why planning a lift is hard, the Think. Plan. Lift. process, landmark projects and a call to book a site visit.',
-      src: 'videos/al-rashid-transport-film.mp4',
-      preview: 'videos/previews/al-rashid-transport-film.mp4',
-      poster: 'images/motion/al-rashid-transport-film.jpg',
-      ratio: 16 / 9,
-    },
-    {
-      title: 'Dixie Paper Trading, bilingual services promo',
-      kind: 'Promo film',
-      length: '60 sec',
-      format: '16:9',
-      lang: 'English and Arabic',
-      desc: 'A service-by-service walkthrough for a print shop, from offset and wide-format printing to custom boxes and invitations, with every line set in both English and Arabic.',
-      src: 'videos/dixie-bilingual-promo.mp4',
-      preview: 'videos/previews/dixie-bilingual-promo.mp4',
-      poster: 'images/motion/dixie-bilingual-promo.jpg',
-      ratio: 16 / 9,
-    },
-    {
-      title: 'Harbour View, apartment listing film',
-      kind: 'Promo film',
-      length: '60 sec',
-      format: '16:9',
-      lang: 'English',
-      desc: 'An illustrated listing film for a two-bedroom harbour-view apartment: the skyline reveal, an animated floor plan, interior highlights, a walkable-distance map, amenities and a viewing call-to-action. A concept piece.',
-      src: 'videos/harbour-view-unit-2304.mp4',
-      preview: 'videos/previews/harbour-view-unit-2304.mp4',
-      poster: 'images/motion/harbour-view-unit-2304.jpg',
-      ratio: 16 / 9,
-    },
-  ],
-  [
-    {
-      title: 'Dixie, vertical profile ad',
-      kind: 'Social ad',
-      length: '35 sec',
-      format: '9:16',
-      lang: 'English',
-      desc: 'A vertical ad that plays like an app: upload your artwork, pick a product, get a quote. Built for Instagram Reels and TikTok.',
-      src: 'videos/dixie-profile-ad-vertical.mp4',
-      preview: 'videos/previews/dixie-profile-ad-vertical.mp4',
-      poster: 'images/motion/dixie-profile-ad-vertical.jpg',
-      ratio: 9 / 16,
-    },
-    {
-      title: 'Dixie, print press logo reveal',
-      kind: 'Logo animation',
-      length: '12 sec',
-      format: '9:16',
-      lang: 'No dialogue',
-      desc: 'The logo prints itself: a blank sheet lands under registration marks, misaligned colour plates snap into place and maple leaves scatter.',
-      src: 'videos/dixie-logo-print-reveal.mp4',
-      preview: 'videos/previews/dixie-logo-print-reveal.mp4',
-      poster: 'images/motion/dixie-logo-print-reveal.jpg',
-      ratio: 9 / 16,
-    },
-    {
-      title: 'Dixie, line-drawn logo build',
-      kind: 'Logo animation',
-      length: '5 sec',
-      format: '4:5',
-      lang: 'No dialogue',
-      desc: 'A short sting where the frame draws itself, the maple mark strokes in and the wordmark settles.',
-      src: 'videos/dixie-logo-line-animation.mp4',
-      preview: 'videos/previews/dixie-logo-line-animation.mp4',
-      poster: 'images/motion/dixie-logo-line-animation.jpg',
-      ratio: 400 / 518,
-    },
-  ],
-  [
-    {
-      title: 'Haroon Andrade, logo intro',
-      kind: 'Logo animation',
-      length: '8 sec',
-      format: '16:9',
-      lang: 'No dialogue',
-      desc: 'A crane, a truck and a gear assemble into the HA monogram before the name slides in.',
-      src: 'videos/haroon-andrade-logo-intro.mp4',
-      preview: 'videos/previews/haroon-andrade-logo-intro.mp4',
-      poster: 'images/motion/haroon-andrade-logo-intro.jpg',
-      ratio: 16 / 9,
-    },
-    {
-      title: 'Al Rashid Group, logo reveal',
-      kind: 'Logo animation',
-      length: '7 sec',
-      format: '16:9',
-      lang: 'No dialogue',
-      desc: 'Road lines light up toward the horizon and the company sign swings into place above them.',
-      src: 'videos/al-rashid-group-logo-reveal.mp4',
-      preview: 'videos/previews/al-rashid-group-logo-reveal.mp4',
-      poster: 'images/motion/al-rashid-group-logo-reveal.jpg',
-      ratio: 16 / 9,
-    },
-  ],
+const filmGroups = [
+  {
+    id: 'logo-reveals',
+    title: 'Logo reveals',
+    note: 'Short stings that bring a mark to life, from a few seconds of line work to a full build.',
+    rows: [
+      [
+        {
+          title: 'Construction company, logo reveal',
+          kind: 'Logo reveal', length: '8.5 sec', format: '16:9', lang: 'With sound',
+          desc: 'A blueprint line draws the company initials, the roof and window build above them and the Design and Build Services line settles underneath.',
+          src: 'videos/jms-logo-reveal.mp4', preview: 'videos/previews/jms-logo-reveal.mp4', poster: 'images/motion/jms-logo-reveal.jpg',
+          ratio: 16 / 9,
+        },
+        {
+          title: 'Lifting services brand, logo intro',
+          kind: 'Logo reveal', length: '8 sec', format: '16:9', lang: 'No dialogue',
+          desc: 'A crane, a truck and a gear assemble into the monogram before the name slides in.',
+          src: 'videos/haroon-andrade-logo-intro.mp4', preview: 'videos/previews/haroon-andrade-logo-intro.mp4', poster: 'images/motion/haroon-andrade-logo-intro.jpg',
+          ratio: 16 / 9,
+        },
+      ],
+      [
+        {
+          title: 'Print brand, logo reveal',
+          kind: 'Logo reveal', length: '5 sec', format: '1:1', lang: 'With sound',
+          desc: 'The colourful letters bounce in one by one, the flower and the character pop up and Prints is written in with a sparkle.',
+          src: 'videos/namiya-logo-reveal.mp4', preview: 'videos/previews/namiya-logo-reveal.mp4', poster: 'images/motion/namiya-logo-reveal.jpg',
+          ratio: 1,
+        },
+        {
+          title: 'Road construction group, logo reveal',
+          kind: 'Logo reveal', length: '7 sec', format: '16:9', lang: 'No dialogue',
+          desc: 'Road lines light up toward the horizon and the company sign swings into place above them.',
+          src: 'videos/al-rashid-group-logo-reveal.mp4', preview: 'videos/previews/al-rashid-group-logo-reveal.mp4', poster: 'images/motion/al-rashid-group-logo-reveal.jpg',
+          ratio: 16 / 9,
+        },
+        {
+          title: 'Print shop, print press logo reveal',
+          kind: 'Logo reveal', length: '12 sec', format: '9:16', lang: 'No dialogue',
+          desc: 'The logo prints itself: a blank sheet lands under registration marks, misaligned colour plates snap into place and maple leaves scatter.',
+          src: 'videos/dixie-logo-print-reveal.mp4', preview: 'videos/previews/dixie-logo-print-reveal.mp4', poster: 'images/motion/dixie-logo-print-reveal.jpg',
+          ratio: 9 / 16,
+        },
+        {
+          title: 'Print shop, line-drawn logo build',
+          kind: 'Logo reveal', length: '5 sec', format: '4:5', lang: 'No dialogue',
+          desc: 'A short sting where the frame draws itself, the maple mark strokes in and the wordmark settles.',
+          src: 'videos/dixie-logo-line-animation.mp4', preview: 'videos/previews/dixie-logo-line-animation.mp4', poster: 'images/motion/dixie-logo-line-animation.jpg',
+          ratio: 400 / 518,
+        },
+      ],
+    ],
+  },
+  {
+    id: 'promo-films',
+    title: 'Promo films',
+    note: 'One-minute films that explain a business, a service or a home, with the script, design and edit done in-house.',
+    rows: [
+      [
+        {
+          title: 'Heavy-lift contractor, lifting services film',
+          kind: 'Promo film', length: '60 sec', format: '16:9', lang: 'English',
+          desc: 'A one-minute explainer for a heavy-lift contractor: why planning a lift is hard, the Think. Plan. Lift. process, landmark projects and a call to book a site visit.',
+          src: 'videos/al-rashid-transport-film.mp4', preview: 'videos/previews/al-rashid-transport-film.mp4', poster: 'images/motion/al-rashid-transport-film.jpg',
+          ratio: 16 / 9,
+        },
+        {
+          title: 'Print shop, bilingual services promo',
+          kind: 'Promo film', length: '60 sec', format: '16:9', lang: 'English and Arabic',
+          desc: 'A service-by-service walkthrough for a print shop, from offset and wide-format printing to custom boxes and invitations, with every line set in both English and Arabic.',
+          src: 'videos/dixie-bilingual-promo.mp4', preview: 'videos/previews/dixie-bilingual-promo.mp4', poster: 'images/motion/dixie-bilingual-promo.jpg',
+          ratio: 16 / 9,
+        },
+        {
+          title: 'Apartment listing film',
+          kind: 'Promo film', length: '60 sec', format: '16:9', lang: 'English',
+          desc: 'An illustrated listing film for a two-bedroom harbour-view apartment: the skyline reveal, an animated floor plan, interior highlights, a walkable-distance map, amenities and a viewing call-to-action. A concept piece.',
+          src: 'videos/harbour-view-unit-2304.mp4', preview: 'videos/previews/harbour-view-unit-2304.mp4', poster: 'images/motion/harbour-view-unit-2304.jpg',
+          ratio: 16 / 9,
+        },
+      ],
+    ],
+  },
+  {
+    id: 'social-ads',
+    title: 'Social ads',
+    note: 'Vertical pieces made for Instagram Reels and TikTok.',
+    rows: [
+      [
+        {
+          title: 'Print shop, vertical profile ad',
+          kind: 'Social ad', length: '35 sec', format: '9:16', lang: 'English',
+          desc: 'A vertical ad that plays like an app: upload your artwork, pick a product, get a quote. Built for Instagram Reels and TikTok.',
+          src: 'videos/dixie-profile-ad-vertical.mp4', preview: 'videos/previews/dixie-profile-ad-vertical.mp4', poster: 'images/motion/dixie-profile-ad-vertical.jpg',
+          ratio: 9 / 16,
+        },
+      ],
+    ],
+  },
 ];
+const reelFilm = {
+  title: 'Showreel', kind: 'Showreel', length: '35 sec', format: '16:9',
+  desc: 'A 35-second cut of the motion work on this page.',
+  src: 'videos/showreel.mp4', poster: 'images/motion/showreel.jpg',
+};
 
 // ---------- helpers ----------
 const $ = (s, el = document) => el.querySelector(s);
@@ -345,7 +348,9 @@ const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
 const saveData = navigator.connection && navigator.connection.saveData;
 const canHover = matchMedia('(hover: hover) and (pointer: fine)').matches;
 const esc = s => String(s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
-const kindLabel = { branding: 'Branding', social: 'Social media', print: 'Print', packaging: 'Packaging', digital: 'Digital' };
+const kindLabel = { branding: 'Branding', social: 'Social media', print: 'Print', packaging: 'Packaging', web: 'Web', digital: 'Digital' };
+const allFilms = filmGroups.flatMap(g => g.rows.flat());
+const MAX_ROW_H = 520; // px: no row of videos gets taller than this
 
 // ---------- mobile menu ----------
 const toggle = $('.menu-toggle');
@@ -359,18 +364,52 @@ menu.addEventListener('click', e => {
   if (e.target.closest('a')) { menu.classList.remove('is-open'); toggle.setAttribute('aria-expanded', 'false'); toggle.textContent = 'Menu'; }
 });
 
-// ---------- hero: print the headline in C, M, Y, then snap to black ----------
-(function registerHeadline() {
-  const h = $('#headline');
-  if (!h || reduceMotion) return;
-  const html = h.innerHTML;
-  h.innerHTML = `<span class="ink">${html}</span>` +
-    ['c', 'm', 'y'].map(p => `<span class="plate ${p}" aria-hidden="true">${html}</span>`).join('');
-  h.classList.add('is-printing');
-  setTimeout(() => { h.classList.remove('is-printing'); h.classList.add('is-printed'); }, 1150);
+// ---------- local time in Abu Dhabi, so visitors know when a reply is likely ----------
+(function clock() {
+  const el = $('#clock');
+  if (!el || !window.Intl) return;
+  const fmt = new Intl.DateTimeFormat('en-GB', { hour: '2-digit', minute: '2-digit', timeZone: 'Asia/Dubai' });
+  const tick = () => { el.textContent = fmt.format(new Date()); };
+  tick();
+  el.closest('.clock-item').hidden = false;
+  setInterval(tick, 30000);
 })();
 
-// ---------- work grid ----------
+// ---------- previews: muted loops that play on hover, focus or when in view ----------
+function playPreview(el) {
+  const v = el.querySelector('video');
+  if (!v || reduceMotion || saveData) return;
+  if (!v.src) v.src = v.dataset.src;
+  v.play().then(() => el.classList.add('is-playing')).catch(() => {});
+}
+function stopPreview(el) {
+  const v = el.querySelector('video');
+  if (!v) return;
+  v.pause();
+  el.classList.remove('is-playing');
+}
+function watchInView(els, threshold) {
+  const io = new IntersectionObserver(entries => entries.forEach(e =>
+    e.isIntersecting ? playPreview(e.target) : stopPreview(e.target)), { threshold });
+  els.forEach(el => io.observe(el));
+}
+
+// ---------- entrances: the parts of each section rise in once, staggered ----------
+const revealIO = 'IntersectionObserver' in window && !reduceMotion
+  ? new IntersectionObserver(entries => entries.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('is-in'); revealIO.unobserve(e.target); }
+    }), { rootMargin: '0px 0px -8% 0px' })
+  : null;
+function reveal(els) {
+  [...els].forEach((el, i) => {
+    if (!revealIO) return el.classList.add('is-in');
+    el.classList.add('rise');
+    el.style.setProperty('--d', `${(i % 6) * 75}ms`);
+    revealIO.observe(el);
+  });
+}
+
+// ---------- work grid: every piece shown whole, at its own shape ----------
 const grid = $('#portfolio');
 let visibleProjects = projects;
 let artIndex = 0;
@@ -382,7 +421,7 @@ function gridImage(p) {
   const base = p.img.replace(/^images\/(.+)\.\w+$/, 'images/grid/$1');
   const fallback = `this.onerror=null;this.parentNode.querySelector('source')?.remove();this.src='${p.img}'`;
   return `<picture>
-      <source type="image/webp" srcset="${base}-480.webp 480w, ${base}-800.webp 800w" sizes="(max-width: 700px) 48vw, 360px">
+      <source type="image/webp" srcset="${base}-480.webp 480w, ${base}-800.webp 800w" sizes="(max-width: 700px) 92vw, 30vw">
       <img src="${base}-800.jpg" alt="" width="${p.w}" height="${p.h}" loading="lazy" decoding="async" onerror="${fallback}">
     </picture>`;
 }
@@ -390,24 +429,20 @@ function gridImage(p) {
 function renderWork(filter = 'all') {
   visibleProjects = projects.filter(p => filter === 'all' || p.category === filter || (p.categories || []).includes(filter));
   grid.innerHTML = visibleProjects.map((p, i) => `
-    <article class="piece marks">
+    <article class="piece" data-i="${i}">
       <div class="piece-sheet">${gridImage(p)}</div>
       <div class="piece-meta">
-        <h3><button class="piece-open" data-i="${i}" aria-haspopup="dialog">${esc(p.title)}</button></h3>
+        <h3><button class="piece-open" aria-haspopup="dialog">${esc(p.short || p.title)}</button></h3>
         <span class="piece-kind">${esc(p.section)}</span>
       </div>
     </article>`).join('');
+  $('#workEmpty').hidden = visibleProjects.length > 0; // e.g. Web, until web pieces are added
 }
-grid.addEventListener('click', e => {
-  const piece = e.target.closest('.piece');
-  if (!piece) return;
-  openArt(+piece.querySelector('.piece-open').dataset.i);
-});
+grid.addEventListener('click', e => { const el = e.target.closest('.piece'); if (el) openArt(+el.dataset.i); });
 document.querySelectorAll('.filters button').forEach(btn => btn.addEventListener('click', () => {
   document.querySelectorAll('.filters button').forEach(b => { b.classList.toggle('is-active', b === btn); b.setAttribute('aria-pressed', b === btn); });
   renderWork(btn.dataset.filter);
 }));
-renderWork();
 
 // ---------- artwork viewer ----------
 const artDialog = $('#artDialog');
@@ -449,55 +484,44 @@ const reel = $('#reel');
 const reelToggle = $('#reelToggle');
 function setReel(play) {
   if (play) reel.play().catch(() => setReel(false)); else reel.pause();
-  reelToggle.textContent = play ? 'Pause reel' : 'Play reel';
+  reelToggle.textContent = play ? 'Pause' : 'Play';
   reelToggle.setAttribute('aria-pressed', !play);
 }
 reelToggle.addEventListener('click', () => setReel(reel.paused));
 if (reduceMotion || saveData) {
   setReel(false);
 } else {
-  // only spend data on the reel once it is close to the screen
-  new IntersectionObserver(([entry], io) => {
-    if (entry.isIntersecting) { reel.preload = 'auto'; io.disconnect(); }
-  }, { rootMargin: '800px 0px' }).observe(reel);
   new IntersectionObserver(([entry]) => {
     if (entry.isIntersecting && reelToggle.getAttribute('aria-pressed') === 'false') reel.play().catch(() => setReel(false));
     else if (!entry.isIntersecting) reel.pause();
   }, { threshold: 0.25 }).observe(reel);
 }
 
-// ---------- film cards ----------
+// ---------- film groups ----------
 const filmsEl = $('#films');
-const allFilms = filmRows.flat();
-filmsEl.innerHTML = filmRows.map(row => `
-  <div class="film-row">${row.map(f => {
-    const i = allFilms.indexOf(f);
-    return `
-    <article class="film${f.ratio < 1 ? ' is-tall' : ''}" style="--r:${f.ratio.toFixed(4)}" data-i="${i}">
-      <div class="film-media">
-        <img src="${f.poster}" alt="" loading="lazy" decoding="async">
-        ${f.preview ? `<video muted loop playsinline preload="none" data-src="${f.preview}" aria-hidden="true"></video>` : ''}
-        <span class="film-badge">${esc(f.length)}</span>
-      </div>
-      <div class="film-info">
-        <h3><button class="film-open" aria-haspopup="dialog">${esc(f.title)}</button></h3>
-        <p class="film-meta"><span>${esc(f.kind)}</span><span>${esc(f.format)}</span><span>${esc(f.lang)}</span></p>
-      </div>
-    </article>`;
-  }).join('')}</div>`).join('');
-
-function playPreview(card) {
-  const v = card.querySelector('video');
-  if (!v || reduceMotion || saveData) return;
-  if (!v.src) v.src = v.dataset.src;
-  v.play().then(() => card.classList.add('is-playing')).catch(() => {});
-}
-function stopPreview(card) {
-  const v = card.querySelector('video');
-  if (!v) return;
-  v.pause();
-  card.classList.remove('is-playing');
-}
+$('#motionJump').innerHTML = filmGroups.map(g =>
+  `<a href="#${g.id}">${esc(g.title)} <span>${g.rows.flat().length}</span></a>`).join('');
+filmsEl.innerHTML = filmGroups.map(g => `
+  <section class="film-group${g.rows.flat().length === 1 ? ' is-single' : ''}" id="${g.id}" aria-labelledby="${g.id}-title">
+    <div class="group-head">
+      <h3 id="${g.id}-title">${esc(g.title)}</h3>
+      <p>${esc(g.note)}</p>
+    </div>
+    ${g.rows.map(row => {
+      const sum = row.reduce((t, f) => t + f.ratio, 0);
+      return `<div class="film-row" style="max-width:${Math.round(sum * MAX_ROW_H)}px">${row.map(f => `
+      <article class="film${f.ratio < 1 ? ' is-tall' : ''}" style="--r:${f.ratio.toFixed(4)}" data-i="${allFilms.indexOf(f)}">
+        <div class="film-media">
+          <img src="${f.poster}" alt="" loading="lazy" decoding="async">
+          ${f.preview ? `<video muted loop playsinline preload="none" poster="${f.poster}" data-src="${f.preview}" aria-hidden="true"></video>` : ''}
+        </div>
+        <div class="film-info">
+          <h4><button class="film-open" aria-haspopup="dialog">${esc(f.title)}</button></h4>
+          <p class="film-meta">${esc(f.length)}, ${esc(f.format)}, ${esc(f.lang)}</p>
+        </div>
+      </article>`).join('')}</div>`;
+    }).join('')}
+  </section>`).join('');
 
 const cards = [...filmsEl.querySelectorAll('.film')];
 if (canHover) {
@@ -508,30 +532,31 @@ if (canHover) {
     c.addEventListener('focusout', () => stopPreview(c));
   });
 } else {
-  // touch screens: play the previews that are mostly in view
-  const io = new IntersectionObserver(entries => entries.forEach(e =>
-    e.isIntersecting ? playPreview(e.target) : stopPreview(e.target)), { threshold: 0.7 });
-  cards.forEach(c => io.observe(c));
+  watchInView(cards, 0.7); // touch screens: play the previews that are mostly in view
 }
 
 // ---------- film player ----------
 const filmDialog = $('#filmDialog');
 const stage = $('#film-stage');
-filmsEl.addEventListener('click', e => {
-  const card = e.target.closest('.film');
-  if (!card) return;
-  const f = allFilms[+card.dataset.i];
+function openFilm(f) {
   cards.forEach(stopPreview);
   if (!reel.paused) reel.pause();
   stage.innerHTML = `<video src="${f.src}" poster="${f.poster}" controls autoplay playsinline></video>`;
-  stage.style.aspectRatio = '';
   $('#film-kind').textContent = `${f.kind}, ${f.length}, ${f.format}`;
   $('#film-title').textContent = f.title;
   $('#film-desc').textContent = f.desc;
   filmDialog.showModal();
   lockPage();
+}
+filmsEl.addEventListener('click', e => {
+  const card = e.target.closest('.film');
+  if (card) openFilm(allFilms[+card.dataset.i]);
 });
+$('#reelSound').addEventListener('click', () => openFilm(reelFilm));
 filmDialog.addEventListener('close', () => {
   stage.innerHTML = '';
   if (!reduceMotion && !saveData && reelToggle.getAttribute('aria-pressed') === 'false') reel.play().catch(() => {});
 });
+
+renderWork();
+reveal(document.querySelectorAll('.hero-copy, .hero-avatar, .note, .sticky, .motion-reel, .section-head > *, .group-head > *, .film, .about-copy > *, .services li, .press-copy > *, .spec, .contact-copy > *, .bcard'));
