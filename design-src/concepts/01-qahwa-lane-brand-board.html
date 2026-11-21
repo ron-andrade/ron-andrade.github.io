@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<!-- Concept brand board for a fictional specialty coffee bar, "Qahwa Lane". Render at 1800x1100. -->
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,800&family=Archivo:wght@400;600;800&family=IBM+Plex+Sans+Arabic:wght@500;700&display=block" rel="stylesheet">
+<style>
+:root{--roast:#3a2418;--crema:#f3e6d3;--clay:#c8673d;--sage:#7d8b6a;--ink:#1d1410}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1800px;height:1100px;overflow:hidden}
+body{background:var(--crema);color:var(--ink);font-family:Archivo,sans-serif;display:grid;grid-template-columns:720px 1fr;gap:0}
+.ar{font-family:'IBM Plex Sans Arabic',sans-serif;direction:rtl}
+.hero{background:var(--roast);color:var(--crema);padding:72px 64px;display:flex;flex-direction:column;justify-content:space-between}
+.mark{width:220px;height:220px}
+.word{font-family:Fraunces,serif;font-weight:800;font-size:112px;line-height:.9;letter-spacing:-.03em;margin-top:40px}
+.word span{color:var(--clay)}
+.word-ar{font-size:54px;font-weight:700;margin-top:18px;color:var(--crema);opacity:.9;text-align:left}
+.tag{font-size:22px;line-height:1.45;max-width:30ch;opacity:.85}
+.tag .ar{display:block;font-size:24px;margin-top:8px;text-align:left}
+.meta{display:flex;justify-content:space-between;font-size:16px;letter-spacing:.04em;opacity:.7}
+.right{padding:64px 72px;display:grid;grid-template-rows:auto auto auto;gap:52px;align-content:center}
+h2{font-family:Fraunces,serif;font-weight:600;font-size:30px;margin-bottom:18px}
+.swatches{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
+.sw{height:170px;border-radius:6px;padding:14px;display:flex;flex-direction:column;justify-content:flex-end;font-size:15px;line-height:1.3}
+.sw b{font-size:18px}
+.type{display:grid;grid-template-columns:1.2fr 1fr;gap:28px;align-items:end}
+.spec1{font-family:Fraunces,serif;font-weight:800;font-size:96px;line-height:.9}
+.spec1 small{display:block;font-family:Archivo;font-weight:600;font-size:16px;margin-top:30px}
+.spec2 p{font-size:19px;line-height:1.5}
+.spec2 .ar{font-size:28px;font-weight:700;margin-top:8px;text-align:left}
+.apps{display:grid;grid-template-columns:260px 1fr 1fr;gap:26px;align-items:end}
+.cup{position:relative;height:300px}
+.cup .body{position:absolute;left:30px;right:30px;bottom:0;top:40px;background:#fff;clip-path:polygon(0 0,100% 0,88% 100%,12% 100%);display:grid;place-items:center}
+.cup .sleeve{position:absolute;left:38px;right:38px;top:120px;height:96px;background:var(--clay);clip-path:polygon(0 0,100% 0,96% 100%,4% 100%);display:grid;place-items:center}
+.cup .lid{position:absolute;left:18px;right:18px;top:16px;height:34px;background:var(--roast);border-radius:10px 10px 4px 4px}
+.cup svg{width:62px;height:62px}
+.card{height:220px;border-radius:8px;padding:26px;display:flex;flex-direction:column;justify-content:space-between}
+.card.front{background:var(--roast);color:var(--crema)}
+.card.back{background:#fff;font-size:16px;line-height:1.6}
+.card .cw{font-family:Fraunces;font-weight:800;font-size:44px;line-height:.9}
+.stamp{display:flex;gap:10px;flex-wrap:wrap}
+.stamp i{width:30px;height:30px;border-radius:50%;border:2px solid var(--roast)}
+.stamp i.on{background:var(--clay);border-color:var(--clay)}
+.label{font-size:14px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;opacity:.6;margin-top:12px}
+</style></head><body>
+<section class="hero">
+  <div>
+    <svg class="mark" viewBox="0 0 220 220" aria-hidden="true">
+      <circle cx="110" cy="110" r="104" fill="none" stroke="#f3e6d3" stroke-width="6"/>
+      <ellipse cx="110" cy="110" rx="46" ry="66" fill="#c8673d" transform="rotate(28 110 110)"/>
+      <path d="M92 52 C130 90, 88 128, 128 168" fill="none" stroke="#3a2418" stroke-width="8" stroke-linecap="round"/>
+    </svg>
+    <div class="word">Qahwa<br><span>Lane</span></div>
+    <div class="word-ar ar">حارة القهوة</div>
+  </div>
+  <p class="tag">Specialty coffee, roasted every week in small batches.<span class="ar">قهوة مختصة، تُحمَّص كل أسبوع</span></p>
+  <div class="meta"><span>Brand board</span><span>Concept, fictional brand</span></div>
+</section>
+<section class="right">
+  <div>
+    <h2>Colour</h2>
+    <div class="swatches">
+      <div class="sw" style="background:#3a2418;color:#f3e6d3"><b>Roast</b>#3A2418</div>
+      <div class="sw" style="background:#c8673d;color:#fff"><b>Clay</b>#C8673D</div>
+      <div class="sw" style="background:#7d8b6a;color:#fff"><b>Sage</b>#7D8B6A</div>
+      <div class="sw" style="background:#f3e6d3;box-shadow:inset 0 0 0 2px #e2d1b8"><b>Crema</b>#F3E6D3</div>
+      <div class="sw" style="background:#fff;box-shadow:inset 0 0 0 2px #e2d1b8"><b>Cup white</b>#FFFFFF</div>
+    </div>
+  </div>
+  <div class="type">
+    <div class="spec1">Aa Qq<small>Fraunces, ExtraBold: headlines and wordmark</small></div>
+    <div class="spec2"><p>Archivo for menus and labels, set plain and easy to read at the counter.</p><p class="ar">قائمة المشروبات</p></div>
+  </div>
+  <div>
+    <h2>Applications</h2>
+    <div class="apps">
+      <div class="cup"><div class="lid"></div><div class="body"></div><div class="sleeve"><svg viewBox="0 0 220 220"><circle cx="110" cy="110" r="100" fill="none" stroke="#fff" stroke-width="10"/><ellipse cx="110" cy="110" rx="46" ry="66" fill="#fff" transform="rotate(28 110 110)"/><path d="M92 52 C130 90, 88 128, 128 168" fill="none" stroke="#c8673d" stroke-width="10" stroke-linecap="round"/></svg></div></div>
+      <div><div class="card front"><div class="cw">Qahwa<br>Lane</div><div class="ar" style="text-align:left;font-size:20px">حارة القهوة</div></div><p class="label">Loyalty card, front</p></div>
+      <div><div class="card back"><div><b>Every 9th cup is on us.</b><br>Show this card at the counter.</div><div class="stamp"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i><i></i><i></i><i></i></div></div><p class="label">Loyalty card, back</p></div>
+    </div>
+  </div>
+</section>
+</body></html>

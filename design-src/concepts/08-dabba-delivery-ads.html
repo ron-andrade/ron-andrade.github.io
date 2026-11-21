@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<!-- Concept: feed ad (4:5) and story ad (9:16) for a fictional UAE food delivery app, "Dabba". Render at 1400x1000. -->
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&display=block" rel="stylesheet">
+<style>
+:root{--grape:#4b1fb8;--lemon:#ffd23f;--mint:#36d6a0;--tomato:#ff4f3a;--cream:#fff7e6;--ink:#1a1030}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1400px;height:1000px;overflow:hidden}
+body{background:#efe8f8;font-family:Archivo,sans-serif;color:var(--ink);display:flex;gap:56px;align-items:center;justify-content:center}
+.wide{font-variation-settings:'wdth' 125}
+.logo{display:inline-flex;align-items:center;gap:10px;font-weight:900;font-size:30px;font-variation-settings:'wdth' 125;letter-spacing:-.02em}
+.logo i{width:34px;height:28px;border-radius:7px 7px 12px 12px;background:var(--lemon);position:relative}
+.logo i::before{content:"";position:absolute;left:8px;right:8px;top:-7px;height:8px;border:3px solid var(--lemon);border-bottom:0;border-radius:8px 8px 0 0}
+/* feed post */
+.feed{position:relative;width:640px;height:800px;background:var(--grape);color:#fff;overflow:hidden;padding:44px;display:flex;flex-direction:column}
+.feed .off{font-weight:900;font-variation-settings:'wdth' 125;font-size:196px;line-height:.8;letter-spacing:-.05em;color:var(--lemon);margin-top:40px;white-space:nowrap}
+.feed .off small{font-size:.32em;letter-spacing:-.02em;vertical-align:top;margin-left:6px;line-height:1.4}
+.feed .sub{font-weight:800;font-variation-settings:'wdth' 110;font-size:46px;line-height:1.02;margin-top:22px}
+.feed .sub .o{color:var(--lemon);font-weight:900}
+.feed .bowl{position:absolute;right:-60px;bottom:96px;width:400px;height:360px}
+.code{margin-top:auto;display:flex;align-items:center;gap:14px}
+.code span{font-size:17px;font-weight:600;opacity:.85}
+.code b{background:#fff;color:var(--grape);font-weight:900;font-variation-settings:'wdth' 110;font-size:30px;padding:10px 20px;border-radius:12px;border:3px dashed var(--grape);outline:3px solid #fff}
+.fine{font-size:12px;opacity:.6;margin-top:16px}
+/* story */
+.story{position:relative;width:440px;height:782px;border-radius:24px;background:var(--ink);color:#fff;overflow:hidden;padding:70px 34px 34px;display:flex;flex-direction:column}
+.story .bars{position:absolute;left:14px;right:14px;top:14px;display:flex;gap:5px}.story .bars i{flex:1;height:3px;border-radius:2px;background:#fff}
+.story .who{position:absolute;left:16px;top:28px;display:flex;align-items:center;gap:9px;font-size:14px;font-weight:600}
+.story .who b{width:30px;height:30px;border-radius:50%;background:var(--lemon)}
+.story h2{font-weight:900;font-variation-settings:'wdth' 125;font-size:54px;line-height:.92;letter-spacing:-.03em;margin-top:30px}
+.story h2 span{color:var(--mint)}
+.story p{font-size:20px;line-height:1.4;margin-top:18px;max-width:20ch}
+.moon{position:absolute;right:34px;top:330px;width:110px;height:110px;border-radius:50%;background:var(--lemon);overflow:hidden}
+.moon::after{content:"";position:absolute;left:34px;top:-14px;width:120px;height:120px;border-radius:50%;background:var(--ink)}
+.stars{position:absolute;inset:0}
+.scooter{position:absolute;left:0;right:0;bottom:130px;height:220px}
+.story .cta{margin-top:auto;background:var(--mint);color:var(--ink);font-weight:900;font-variation-settings:'wdth' 110;font-size:24px;text-align:center;padding:18px;border-radius:16px;position:relative}
+.story .cta small{display:block;font-weight:600;font-size:13px;margin-top:2px;font-variation-settings:'wdth' 100}
+.label{position:absolute;left:0;right:0;bottom:-36px;text-align:center;font-size:14px;font-weight:700;color:#5a4f78}
+.wrap{position:relative}
+</style></head><body>
+
+<div class="wrap"><section class="feed">
+  <span class="logo"><i></i>dabba</span>
+  <p class="off">50%</p>
+  <p class="sub"><span class="o">OFF</span> your first<br>3 orders.</p>
+  <svg class="bowl" viewBox="0 0 400 360" aria-hidden="true">
+    <ellipse cx="200" cy="200" rx="190" ry="40" fill="#3a1690"/>
+    <path d="M14 200 Q20 340 200 340 Q380 340 386 200 Z" fill="#ff4f3a"/>
+    <path d="M40 228 Q200 260 360 228" stroke="#fff7e6" stroke-width="10" fill="none" stroke-linecap="round"/>
+    <circle cx="110" cy="178" r="44" fill="#36d6a0"/><circle cx="180" cy="160" r="40" fill="#ffd23f"/><circle cx="250" cy="170" r="46" fill="#fff7e6"/><circle cx="310" cy="184" r="36" fill="#36d6a0"/>
+    <circle cx="200" cy="190" r="30" fill="#ff8a3d"/><circle cx="150" cy="196" r="22" fill="#ffd23f"/>
+    <path d="M280 40 L330 170 M310 30 L350 168" stroke="#fff7e6" stroke-width="10" stroke-linecap="round"/>
+  </svg>
+  <div class="code"><span>Use code</span><b>DABBA50</b></div>
+  <p class="fine">New users only. Up to AED 25 off per order. Concept, fictional brand.</p>
+</section><p class="label">Feed ad, 4:5</p></div>
+
+<div class="wrap"><section class="story">
+  <div class="bars"><i></i></div>
+  <div class="who"><b></b>dabba · Sponsored</div>
+  <svg class="stars" viewBox="0 0 440 782" aria-hidden="true"><g fill="#fff"><circle cx="280" cy="360" r="2.5"/><circle cx="250" cy="470" r="2"/><circle cx="412" cy="470" r="3"/><circle cx="330" cy="490" r="2"/></g></svg>
+  <span class="moon"></span>
+  <h2>Hungry at<br><span>2 am?</span></h2>
+  <p>Shawarma, karak, pizza or pancakes. We deliver until 3 am.</p>
+  <svg class="scooter" viewBox="0 0 440 220" aria-hidden="true">
+    <path d="M0 196 H440" stroke="#3a2e5c" stroke-width="4" stroke-dasharray="20 14"/>
+    <circle cx="120" cy="168" r="30" fill="#1a1030" stroke="#fff7e6" stroke-width="8"/><circle cx="300" cy="168" r="30" fill="#1a1030" stroke="#fff7e6" stroke-width="8"/>
+    <path d="M110 160 L180 160 L200 110 L290 110 L320 160" fill="none" stroke="#4b1fb8" stroke-width="18" stroke-linejoin="round"/>
+    <rect x="130" y="56" width="86" height="64" rx="10" fill="#ffd23f"/><text x="173" y="96" text-anchor="middle" font-family="Archivo" font-weight="900" font-size="18" fill="#1a1030">dabba</text>
+    <path d="M286 110 L270 60 L300 56" fill="none" stroke="#fff7e6" stroke-width="8" stroke-linecap="round"/>
+    <circle cx="250" cy="58" r="18" fill="#36d6a0"/><path d="M244 76 L232 112" stroke="#36d6a0" stroke-width="16" stroke-linecap="round"/>
+  </svg>
+  <div class="cta">Order now<small>Delivery in about 30 minutes</small></div>
+</section><p class="label">Story ad, 9:16</p></div>
+</body></html>

@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<!-- Concept: 50 x 70 cm event poster for a fictional seaside fun run, "Tide Run 10K". Render at 1400x1960. -->
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=IBM+Plex+Sans+Arabic:wght@600;700&display=block" rel="stylesheet">
+<style>
+:root{--sea:#0b4f8a;--deep:#062b4d;--sun:#ffb21c;--coral:#ff5a3c;--foam:#f4f7f6}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1400px;height:1960px;overflow:hidden}
+body{background:var(--foam);font-family:Archivo,sans-serif;color:var(--deep);position:relative}
+.ar{font-family:'IBM Plex Sans Arabic',sans-serif;direction:rtl}
+.sky{position:absolute;inset:0 0 auto 0;height:1180px;background:var(--sun)}
+.sunball{position:absolute;left:760px;top:250px;width:520px;height:520px;border-radius:50%;background:var(--coral)}
+.waves{position:absolute;left:0;right:0;top:760px;height:1200px}
+.top{position:absolute;left:96px;right:96px;top:90px;display:flex;justify-content:space-between;font-size:30px;font-weight:700}
+.title{position:absolute;left:84px;top:200px;font-weight:900;font-variation-settings:'wdth' 125;font-size:300px;line-height:.8;letter-spacing:-.04em;color:var(--deep)}
+.title .k{display:block;font-size:470px;color:#fff;-webkit-text-stroke:0;}
+.runner{position:absolute;left:960px;top:330px;width:290px;height:340px}
+.ar-title{position:absolute;right:96px;top:1050px;font-size:96px;font-weight:700;color:#fff}
+.info{position:absolute;left:96px;right:96px;bottom:110px;display:grid;grid-template-columns:repeat(3,1fr);gap:36px;color:#fff}
+.info b{display:block;font-size:66px;font-weight:900;font-variation-settings:'wdth' 110;line-height:1}
+.info span{display:block;font-size:28px;margin-top:10px;opacity:.9}
+.info .ar{font-size:32px;margin-top:8px;text-align:left;opacity:.9}
+.cta{position:absolute;left:96px;right:96px;bottom:400px;display:flex;justify-content:space-between;align-items:center;background:var(--foam);color:var(--deep);padding:34px 44px;border-radius:999px}
+.cta b{font-size:52px;font-weight:900;font-variation-settings:'wdth' 110}
+.cta .ar{font-size:44px;font-weight:700}
+.foot{position:absolute;left:96px;right:96px;bottom:44px;display:flex;justify-content:space-between;color:#fff;opacity:.7;font-size:22px}
+</style></head><body>
+<div class="sky"></div>
+<div class="sunball"></div>
+<svg class="runner" viewBox="0 0 360 420" aria-hidden="true">
+  <g fill="#062b4d">
+    <circle cx="214" cy="56" r="40"/>
+    <path d="M190 104 L150 238 L188 246 L218 140 Z"/>
+    <path d="M168 222 L96 310 L56 300 L48 330 L110 342 L190 252 Z"/>
+    <path d="M178 236 L232 330 L214 404 L250 410 L272 324 L214 226 Z"/>
+    <path d="M196 120 L120 150 L86 210 L112 222 L140 170 L200 152 Z"/>
+    <path d="M206 128 L270 176 L322 150 L332 178 L266 214 L196 168 Z"/>
+  </g>
+</svg>
+<svg class="waves" viewBox="0 0 1400 1200" preserveAspectRatio="none" aria-hidden="true">
+  <path d="M0 120 C180 40 340 40 520 110 S880 190 1060 110 S1300 40 1400 80 L1400 1200 L0 1200 Z" fill="#1b77c2"/>
+  <path d="M0 220 C200 150 380 160 560 220 S920 290 1100 220 S1320 160 1400 190 L1400 1200 L0 1200 Z" fill="#0b4f8a"/>
+  <path d="M0 330 C220 270 420 280 600 330 S960 390 1140 330 S1330 280 1400 300 L1400 1200 L0 1200 Z" fill="#062b4d"/>
+</svg>
+<div class="top"><span>Saturday run club presents</span><span>Concept poster</span></div>
+<h1 class="title">TIDE<br>RUN<span class="k">10K</span></h1>
+<p class="ar ar-title">سباق المدّ ١٠ كم</p>
+<div class="cta"><b>Register now</b><span class="ar">سجّل الآن</span></div>
+<div class="info">
+  <div><b>14 Feb</b><span>Saturday, start 6:30 am</span><p class="ar">السبت ١٤ فبراير</p></div>
+  <div><b>Sea front</b><span>Out and back along the water</span><p class="ar">على الواجهة البحرية</p></div>
+  <div><b>5K / 10K</b><span>All ages, finisher medal</span><p class="ar">لجميع الأعمار</p></div>
+</div>
+<div class="foot"><span>tiderun.example</span><span>Concept, fictional event</span></div>
+</body></html>

@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<!-- Concept: three bilingual Instagram posts (4:5) for the fictional coffee bar "Qahwa Lane". Render at 2040x980. -->
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,800&family=Archivo:wght@400;600;800&family=IBM+Plex+Sans+Arabic:wght@500;700&display=block" rel="stylesheet">
+<style>
+:root{--roast:#3a2418;--crema:#f3e6d3;--clay:#c8673d;--sage:#7d8b6a;--ink:#1d1410}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:2040px;height:980px;overflow:hidden}
+body{background:#e7dccb;font-family:Archivo,sans-serif;display:flex;gap:40px;align-items:center;justify-content:center;padding:60px}
+.ar{font-family:'IBM Plex Sans Arabic',sans-serif;direction:rtl}
+.post{width:640px;height:800px;position:relative;overflow:hidden;display:flex;flex-direction:column;justify-content:space-between;padding:52px}
+.handle{display:flex;align-items:center;gap:12px;font-size:20px;font-weight:600}
+.handle svg{width:40px;height:40px}
+.serif{font-family:Fraunces,serif}
+/* post 1: drink of the season */
+.p1{background:var(--clay);color:#fff;justify-content:flex-start}
+.p1 .title{margin-top:48px;position:relative}
+.p1 .price{margin-top:auto;position:relative}
+.p1 h1{font-family:Fraunces,serif;font-weight:800;font-size:80px;line-height:.92;letter-spacing:-.02em}
+.p1 .ar-h{font-size:46px;font-weight:700;margin-top:14px;text-align:left}
+.p1 .glass{position:absolute;right:52px;top:300px;width:220px;height:286px}
+.p1 .price{display:flex;justify-content:space-between;align-items:end;font-size:22px}
+.p1 .price b{font-family:Fraunces;font-size:54px}
+/* post 2: new branch */
+.p2{background:var(--crema);color:var(--ink)}
+.p2 .big{font-family:Fraunces,serif;font-weight:800;font-size:150px;line-height:.82;letter-spacing:-.04em;color:var(--roast)}
+.p2 .big span{color:var(--clay)}
+.p2 .sub{font-size:28px;font-weight:600;line-height:1.3;margin-top:22px}
+.p2 .ar-sub{font-size:34px;font-weight:700;margin-top:10px;text-align:left;color:var(--roast)}
+.p2 .map{height:160px;border-radius:10px;background:#fff;position:relative;overflow:hidden}
+.p2 .map i{position:absolute;background:#e9dcc8}
+.p2 .pin{position:absolute;left:58%;top:34%;width:34px;height:34px;border-radius:50% 50% 50% 0;transform:rotate(-45deg);background:var(--clay)}
+.p2 .cap{display:flex;justify-content:space-between;font-size:18px;font-weight:600;margin-top:14px}
+/* post 3: good morning */
+.p3{background:var(--roast);color:var(--crema)}
+.p3 .sun{position:absolute;left:50%;top:44%;width:420px;height:420px;margin:-210px 0 0 -210px;border-radius:50%;background:var(--clay)}
+.p3 .beans{position:absolute;inset:0}
+.p3 .copy{position:relative;text-align:center}
+.p3 .copy .ar{font-size:92px;font-weight:700;line-height:1.1}
+.p3 .copy .en{font-family:Fraunces,serif;font-style:italic;font-size:32px;margin:10px auto 0;max-width:320px;line-height:1.2}
+.p3 .hours{position:relative;display:flex;justify-content:space-between;font-size:20px;font-weight:600;border-top:2px solid rgba(243,230,211,.35);padding-top:18px}
+</style></head><body>
+
+<!-- 1. Drink of the season -->
+<article class="post p1">
+  <div class="handle"><svg viewBox="0 0 220 220"><circle cx="110" cy="110" r="100" fill="none" stroke="#fff" stroke-width="12"/><ellipse cx="110" cy="110" rx="46" ry="66" fill="#fff" transform="rotate(28 110 110)"/><path d="M92 52 C130 90, 88 128, 128 168" fill="none" stroke="#c8673d" stroke-width="10" stroke-linecap="round"/></svg>@qahwalane</div>
+  <svg class="glass" viewBox="0 0 330 430" aria-hidden="true">
+    <path d="M40 40 L290 40 L260 400 Q258 420 238 420 L92 420 Q72 420 70 400 Z" fill="rgba(255,255,255,.18)" stroke="#fff" stroke-width="6"/>
+    <path d="M58 160 L272 160 L258 396 Q256 410 240 410 L90 410 Q74 410 72 396 Z" fill="#3a2418"/>
+    <path d="M58 160 L272 160 L268 214 L62 214 Z" fill="#f3e6d3"/>
+    <rect x="96" y="250" width="56" height="56" rx="10" fill="rgba(255,255,255,.55)" transform="rotate(-12 124 278)"/>
+    <rect x="176" y="300" width="56" height="56" rx="10" fill="rgba(255,255,255,.45)" transform="rotate(14 204 328)"/>
+    <rect x="186" y="0" width="16" height="200" rx="8" fill="#7d8b6a" transform="rotate(16 194 100)"/>
+  </svg>
+  <div class="title">
+    <h1>Cardamom<br>cold brew</h1>
+    <p class="ar ar-h">كولد برو بالهيل</p>
+  </div>
+  <div class="price"><span>Drink of the season<br><span class="ar" style="font-size:24px">مشروب الموسم</span></span><b>18 AED</b></div>
+</article>
+
+<!-- 2. New branch -->
+<article class="post p2">
+  <div class="handle"><svg viewBox="0 0 220 220"><circle cx="110" cy="110" r="100" fill="none" stroke="#3a2418" stroke-width="12"/><ellipse cx="110" cy="110" rx="46" ry="66" fill="#c8673d" transform="rotate(28 110 110)"/><path d="M92 52 C130 90, 88 128, 128 168" fill="none" stroke="#3a2418" stroke-width="10" stroke-linecap="round"/></svg>@qahwalane</div>
+  <div>
+    <div class="big">Now<br><span>open.</span></div>
+    <p class="sub">A second Qahwa Lane, with a bigger roaster and a quiet upstairs room.</p>
+    <p class="ar ar-sub">فرعنا الجديد مفتوح الآن</p>
+  </div>
+  <div>
+    <div class="map"><i style="left:0;right:0;top:58px;height:18px"></i><i style="left:120px;width:18px;top:0;bottom:0"></i><i style="left:330px;width:22px;top:0;bottom:0;transform:skewX(-18deg)"></i><i style="left:0;right:0;top:118px;height:12px"></i><span class="pin"></span></div>
+    <div class="cap"><span>Open daily, 7 am to 11 pm</span><span class="ar">يومياً من ٧ صباحاً</span></div>
+  </div>
+</article>
+
+<!-- 3. Good morning -->
+<article class="post p3">
+  <div class="sun"></div>
+  <svg class="beans" viewBox="0 0 640 800" aria-hidden="true">
+    <g fill="#f3e6d3" opacity=".9">
+      <ellipse cx="120" cy="190" rx="18" ry="26" transform="rotate(30 120 190)"/>
+      <ellipse cx="530" cy="250" rx="16" ry="24" transform="rotate(-20 530 250)"/>
+      <ellipse cx="90" cy="560" rx="14" ry="21" transform="rotate(60 90 560)"/>
+      <ellipse cx="560" cy="600" rx="18" ry="26" transform="rotate(10 560 600)"/>
+    </g>
+  </svg>
+  <div class="handle" style="position:relative"><svg viewBox="0 0 220 220"><circle cx="110" cy="110" r="100" fill="none" stroke="#f3e6d3" stroke-width="12"/><ellipse cx="110" cy="110" rx="46" ry="66" fill="#c8673d" transform="rotate(28 110 110)"/><path d="M92 52 C130 90, 88 128, 128 168" fill="none" stroke="#3a2418" stroke-width="10" stroke-linecap="round"/></svg>@qahwalane</div>
+  <div class="copy"><p class="ar">صباح الخير</p><p class="en">Good morning, first cup is ready.</p></div>
+  <div class="hours"><span>Doors open at 7</span><span>Qahwa Lane</span></div>
+</article>
+</body></html>

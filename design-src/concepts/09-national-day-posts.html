@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<!-- Concept: Eid Al Etihad (UAE National Day, 2 December, 55th) greeting posts, 4:5, for two fictional brands:
+     the developer "Corallo" and the delivery app "Dabba". Render at 1480x1000. -->
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,500;6..96,700&family=Archivo:wdth,wght@62..125,400..900&display=block" rel="stylesheet">
+<style>
+:root{--red:#ef3340;--green:#00843d;--black:#141414;--white:#ffffff;--sea:#0d3b3f;--sand:#efe6d6;--coral:#e8664a;--grape:#4b1fb8;--lemon:#ffd23f}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1480px;height:1000px;overflow:hidden}
+body{background:#e7e3dc;font-family:Archivo,sans-serif;display:flex;gap:56px;align-items:center;justify-content:center}
+.post{position:relative;width:640px;height:800px;overflow:hidden;padding:46px;display:flex;flex-direction:column}
+.label{position:absolute;left:0;right:0;bottom:-36px;text-align:center;font-size:14px;font-weight:700;color:#5e5a53}
+.wrap{position:relative}
+/* flag block: red hoist, then green / white / black */
+.colours{display:flex;gap:6px}
+.colours i{width:34px;height:10px;border-radius:5px}
+/* Corallo */
+.co{background:var(--sea);color:var(--sand)}
+.co .top{display:flex;justify-content:space-between;align-items:center;font-size:14px;font-weight:600;letter-spacing:.18em;text-transform:uppercase}
+.co .logo{display:flex;align-items:center;gap:10px}
+.co .logo svg{width:28px;height:28px}
+.co .num{font-family:'Bodoni Moda',serif;font-weight:700;font-variation-settings:'opsz' 8;font-size:330px;line-height:.82;margin-top:40px;color:var(--sand);letter-spacing:-.03em}
+.co .num span{font-size:.24em;letter-spacing:0;color:var(--coral);vertical-align:top;margin-left:6px;line-height:1.6}
+.co h2{font-family:'Bodoni Moda',serif;font-weight:500;font-size:52px;line-height:1.02;margin-top:22px}
+.co p{font-size:19px;line-height:1.5;margin-top:16px;max-width:28ch;opacity:.85}
+.co .foot{margin-top:auto;display:flex;justify-content:space-between;align-items:end}
+.co .date{font-size:15px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;opacity:.7}
+/* Dabba */
+.da{background:var(--grape);color:#fff}
+.da .logo{display:inline-flex;align-items:center;gap:10px;font-weight:900;font-size:30px;font-variation-settings:'wdth' 125;letter-spacing:-.02em}
+.da .logo i{width:34px;height:28px;border-radius:7px 7px 12px 12px;background:var(--lemon);position:relative}
+.da .logo i::before{content:"";position:absolute;left:8px;right:8px;top:-7px;height:8px;border:3px solid var(--lemon);border-bottom:0;border-radius:8px 8px 0 0}
+.da h2{font-weight:900;font-variation-settings:'wdth' 125;font-size:70px;line-height:.92;letter-spacing:-.03em;margin-top:34px}
+.da h2 span{color:var(--lemon)}
+.da .box{position:absolute;left:50%;bottom:150px;width:380px;height:300px;margin-left:-190px}
+.da .offer{margin-top:auto;display:flex;justify-content:space-between;align-items:center;background:#fff;color:var(--grape);border-radius:16px;padding:18px 22px;font-weight:800;font-size:22px;position:relative}
+.da .offer small{display:block;font-weight:600;font-size:13px;color:#5a4f78}
+</style></head><body>
+<svg width="0" height="0" style="position:absolute"><defs>
+  <symbol id="co" viewBox="0 0 40 40"><path d="M20 4 C30 12 30 28 20 36 C10 28 10 12 20 4 Z" fill="none" stroke="#efe6d6" stroke-width="3"/><path d="M20 12 V30 M14 18 L20 24 L26 18" fill="none" stroke="#e8664a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+</defs></svg>
+
+<div class="wrap"><section class="post co">
+  <div class="top"><span class="logo"><svg><use href="#co"/></svg>Corallo</span><span class="colours" aria-hidden="true"><i style="background:#ef3340"></i><i style="background:#00843d"></i><i style="background:#fff"></i><i style="background:#141414;outline:1px solid rgba(255,255,255,.35)"></i></span></div>
+  <p class="num">55<span>th</span></p>
+  <h2>Happy<br>Eid Al Etihad.</h2>
+  <p>Fifty-five years of a nation built with vision. We are proud to build homes here.</p>
+  <div class="foot"><span class="date">2 December</span><span class="date">Concept post</span></div>
+</section><p class="label">Developer greeting</p></div>
+
+<div class="wrap"><section class="post da">
+  <span class="logo"><i></i>dabba</span>
+  <h2>55 years of<br><span>good food</span><br>together.</h2>
+  <svg class="box" viewBox="0 0 380 300" aria-hidden="true">
+    <path d="M150 60 Q150 20 190 20 Q230 20 230 60" fill="none" stroke="#ffd23f" stroke-width="16" stroke-linecap="round"/>
+    <rect x="40" y="60" width="300" height="220" rx="34" fill="#ffd23f"/>
+    <g>
+      <rect x="40" y="150" width="300" height="12" fill="#ef3340"/><rect x="40" y="162" width="300" height="12" fill="#00843d"/>
+      <rect x="40" y="174" width="300" height="12" fill="#ffffff"/><rect x="40" y="186" width="300" height="12" fill="#141414"/>
+    </g>
+    <text x="190" y="126" text-anchor="middle" font-family="Archivo" font-weight="900" font-size="34" fill="#4b1fb8">dabba</text>
+    <text x="190" y="252" text-anchor="middle" font-family="Archivo" font-weight="900" font-size="30" fill="#4b1fb8">55</text>
+    <g fill="#ffd23f"><circle cx="30" cy="40" r="7"/><circle cx="356" cy="30" r="5"/><circle cx="20" cy="250" r="5"/><circle cx="364" cy="230" r="8"/></g>
+  </svg>
+  <div class="offer"><span>Free delivery<small>2 and 3 December</small></span><span>Happy Eid Al Etihad</span></div>
+</section><p class="label">Delivery app greeting</p></div>
+</body></html>

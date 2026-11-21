@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<!-- Concept: 5-slide Instagram carousel (4:5) for an off-plan launch by a fictional developer.
+     "Saltwater Residences" by "Corallo". Shown as a 3 x 2 sheet. Render at 1740x1460. -->
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,500;6..96,700&family=Archivo:wght@400;500;600;800&display=block" rel="stylesheet">
+<style>
+:root{--sea:#0d3b3f;--sea2:#12565b;--sand:#efe6d6;--coral:#e8664a;--foam:#fbf8f2;--ink:#0b2224}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1740px;height:1460px;overflow:hidden}
+body{background:#dcd4c6;font-family:Archivo,sans-serif;color:var(--ink);display:grid;grid-template-columns:repeat(3,520px);grid-template-rows:650px 650px;gap:40px;padding:60px;justify-content:center;align-content:center}
+.s{position:relative;overflow:hidden;padding:40px;display:flex;flex-direction:column}
+.serif{font-family:'Bodoni Moda',serif}
+.brand{display:flex;justify-content:space-between;align-items:center;font-size:14px;font-weight:600;letter-spacing:.12em;text-transform:uppercase}
+.logo{display:flex;align-items:center;gap:10px;letter-spacing:.18em}
+.logo svg{width:28px;height:28px}
+.num{font-size:13px;letter-spacing:.1em;opacity:.7}
+.permit{position:absolute;left:40px;bottom:18px;font-size:11px;opacity:.55;letter-spacing:.02em}
+/* 1 hook */
+.s1{background:var(--sea);color:var(--foam)}
+.s1 h1{font-family:'Bodoni Moda',serif;font-weight:500;font-size:66px;line-height:.98;margin-top:34px;letter-spacing:-.01em}
+.s1 h1 em{font-style:italic;color:var(--coral)}
+.s1 .scene{position:absolute;left:0;right:0;bottom:0;height:330px}
+.s1 .pill{position:absolute;left:40px;bottom:50px;background:var(--coral);color:#fff;font-weight:700;font-size:15px;padding:10px 18px;border-radius:999px;letter-spacing:.04em}
+/* 2 location */
+.s2{background:var(--sand)}
+.s2 h2{font-family:'Bodoni Moda',serif;font-weight:500;font-size:50px;line-height:1;margin-top:30px}
+.s2 .map{position:relative;height:250px;margin-top:26px;background:#e3d8c4;border-radius:14px;overflow:hidden}
+.s2 .rows{margin-top:24px;display:grid;gap:12px}
+.s2 .row{display:flex;justify-content:space-between;align-items:baseline;border-bottom:1.5px solid rgba(11,34,36,.18);padding-bottom:10px;font-size:19px}
+.s2 .row b{font-family:'Bodoni Moda',serif;font-size:32px;font-weight:700;color:var(--sea2)}
+/* 3 units */
+.s3{background:var(--foam)}
+.s3 .kicker{font-size:18px;font-weight:600;margin-top:34px}
+.s3 .from{font-family:'Bodoni Moda',serif;font-weight:700;font-size:88px;line-height:.95;white-space:nowrap;color:var(--sea);margin-top:10px;letter-spacing:-.02em}
+.s3 .from small{display:block;font-family:Archivo;font-weight:600;font-size:20px;letter-spacing:.06em;color:var(--coral);margin-bottom:6px}
+.s3 .units{margin-top:auto;display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:22px}
+.s3 .u{background:var(--sand);border-radius:12px;padding:18px 14px}
+.s3 .u b{display:block;font-family:'Bodoni Moda',serif;font-size:40px;line-height:1;color:var(--sea)}
+.s3 .u span{font-size:14px;line-height:1.35;display:block;margin-top:6px}
+/* 4 payment plan */
+.s4{background:var(--sea2);color:var(--foam)}
+.s4 h2{font-family:'Bodoni Moda',serif;font-weight:500;font-size:48px;line-height:1;margin-top:30px}
+.s4 .big{font-family:'Bodoni Moda',serif;font-weight:700;font-size:140px;line-height:.85;margin-top:22px;color:var(--sand)}
+.s4 .big span{color:var(--coral)}
+.s4 .bar{display:flex;height:22px;border-radius:11px;overflow:hidden;margin-top:30px}
+.s4 .steps{display:grid;grid-template-columns:1fr 1.3fr 1fr;gap:8px;margin-top:14px;font-size:14px;line-height:1.35}
+.s4 .steps b{display:block;font-size:22px}
+.s4 .handover{margin-top:auto;margin-bottom:22px;font-size:16px;opacity:.85}
+/* 5 CTA */
+.s5{background:var(--coral);color:#fff}
+.s5 h2{font-family:'Bodoni Moda',serif;font-weight:500;font-size:64px;line-height:.98;margin-top:44px}
+.s5 .note{font-size:19px;line-height:1.45;margin-top:20px;max-width:24ch}
+.s5 .btn{margin-top:auto;background:#fff;color:var(--ink);border-radius:999px;padding:20px 26px;font-weight:800;font-size:22px;display:flex;justify-content:space-between;align-items:center}
+.s5 .contact{margin-top:16px;margin-bottom:22px;display:flex;justify-content:space-between;font-size:15px;font-weight:600}
+/* 6 caption cell */
+.cap{background:transparent;padding:30px 10px;justify-content:space-between}
+.cap h3{font-family:'Bodoni Moda',serif;font-weight:500;font-size:46px;line-height:1.02}
+.cap p{font-size:19px;line-height:1.55;margin-top:18px}
+.cap ol{list-style:none;display:grid;gap:8px;font-size:17px}
+.cap ol li{display:flex;gap:12px}
+.cap ol li span{width:26px;height:26px;border-radius:50%;background:var(--sea);color:#fff;display:grid;place-items:center;font-size:13px;font-weight:700;flex:none}
+.swipe{font-weight:700;font-size:17px;color:var(--sea2)}
+</style></head><body>
+<svg width="0" height="0" style="position:absolute"><defs>
+  <symbol id="co" viewBox="0 0 40 40"><path d="M20 4 C30 12 30 28 20 36 C10 28 10 12 20 4 Z" fill="none" stroke="currentColor" stroke-width="3"/><path d="M20 12 V30 M14 18 L20 24 L26 18" fill="none" stroke="#e8664a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+</defs></svg>
+
+<!-- 1 -->
+<section class="s s1">
+  <div class="brand"><span class="logo"><svg><use href="#co"/></svg>Corallo</span><span class="num">1 / 5</span></div>
+  <h1>Wake up<br>to the <em>sea</em>.</h1>
+  <p style="margin-top:16px;font-size:18px;opacity:.85">Saltwater Residences, Marsa Island</p>
+  <svg class="scene" viewBox="0 0 520 330" preserveAspectRatio="none" aria-hidden="true">
+    <circle cx="390" cy="120" r="56" fill="#e8664a"/>
+    <g fill="#efe6d6">
+      <rect x="96" y="70" width="70" height="190" rx="4"/><rect x="176" y="20" width="84" height="240" rx="4"/><rect x="270" y="96" width="62" height="164" rx="4"/>
+    </g>
+    <g fill="#0d3b3f" opacity=".35">
+      <rect x="110" y="90" width="42" height="6"/><rect x="110" y="110" width="42" height="6"/><rect x="110" y="130" width="42" height="6"/><rect x="110" y="150" width="42" height="6"/><rect x="110" y="170" width="42" height="6"/><rect x="110" y="190" width="42" height="6"/>
+      <rect x="192" y="44" width="52" height="6"/><rect x="192" y="64" width="52" height="6"/><rect x="192" y="84" width="52" height="6"/><rect x="192" y="104" width="52" height="6"/><rect x="192" y="124" width="52" height="6"/><rect x="192" y="144" width="52" height="6"/><rect x="192" y="164" width="52" height="6"/><rect x="192" y="184" width="52" height="6"/>
+      <rect x="282" y="116" width="38" height="6"/><rect x="282" y="136" width="38" height="6"/><rect x="282" y="156" width="38" height="6"/><rect x="282" y="176" width="38" height="6"/>
+    </g>
+    <path d="M0 250 C90 236 170 262 260 250 S430 238 520 252 L520 330 L0 330 Z" fill="#12565b"/>
+    <path d="M0 286 C110 274 200 298 300 286 S450 276 520 290 L520 330 L0 330 Z" fill="#0b2f33"/>
+  </svg>
+  <span class="pill">Now launching</span>
+</section>
+
+<!-- 2 -->
+<section class="s s2">
+  <div class="brand"><span class="logo"><svg style="color:#0d3b3f"><use href="#co"/></svg>Corallo</span><span class="num">2 / 5</span></div>
+  <h2>Minutes from<br>everything.</h2>
+  <div class="map">
+    <svg viewBox="0 0 440 250" width="100%" height="100%" preserveAspectRatio="none" aria-hidden="true">
+      <path d="M0 160 C80 140 120 190 200 180 S330 120 440 150 L440 250 L0 250 Z" fill="#9cc8c4"/>
+      <path d="M150 168 C170 150 230 150 250 166 C232 186 170 188 150 168 Z" fill="#efe6d6"/>
+      <path d="M30 40 L410 120" stroke="#fbf8f2" stroke-width="10"/><path d="M120 0 L170 160" stroke="#fbf8f2" stroke-width="8"/>
+      <circle cx="200" cy="166" r="13" fill="#e8664a" stroke="#fff" stroke-width="4"/>
+    </svg>
+  </div>
+  <div class="rows">
+    <div class="row"><span>Beach and marina walk</span><b>2 min</b></div>
+    <div class="row"><span>City centre</span><b>12 min</b></div>
+    <div class="row"><span>International airport</span><b>20 min</b></div>
+  </div>
+</section>
+
+<!-- 3 -->
+<section class="s s3">
+  <div class="brand"><span class="logo"><svg style="color:#0d3b3f"><use href="#co"/></svg>Corallo</span><span class="num">3 / 5</span></div>
+  <p class="kicker">Sea-view apartments</p>
+  <p class="from"><small>Starting from</small>AED 1.2M</p>
+  <div class="units">
+    <div class="u"><b>1</b><span>bedroom<br>from 780 sq ft</span></div>
+    <div class="u"><b>2</b><span>bedroom<br>from 1,240 sq ft</span></div>
+    <div class="u"><b>3</b><span>bedroom<br>from 1,860 sq ft</span></div>
+  </div>
+</section>
+
+<!-- 4 -->
+<section class="s s4">
+  <div class="brand"><span class="logo"><svg><use href="#co"/></svg>Corallo</span><span class="num">4 / 5</span></div>
+  <h2>Pay as<br>it rises.</h2>
+  <p class="big">60<span>/</span>40</p>
+  <div class="bar"><i style="flex:10;background:#e8664a"></i><i style="flex:50;background:#efe6d6"></i><i style="flex:40;background:#7fb3ae"></i></div>
+  <div class="steps"><span><b>10%</b>on booking</span><span><b>50%</b>during construction</span><span><b>40%</b>on handover</span></div>
+  <p class="handover">Handover Q4 2028</p>
+</section>
+
+<!-- 5 -->
+<section class="s s5">
+  <div class="brand"><span class="logo"><svg style="color:#fff"><use href="#co"/></svg>Corallo</span><span class="num">5 / 5</span></div>
+  <h2>Launch prices<br>end 30 Dec.</h2>
+  <p class="note">Register now for floor plans, the full price list and a private sales gallery tour.</p>
+  <div class="btn">Register interest <span>→</span></div>
+  <div class="contact"><span>corallo.example</span><span>800 000 000</span></div>
+  <span class="permit" style="color:#fff">Permit no. 0000000 · concept</span>
+</section>
+
+<!-- caption -->
+<section class="s cap">
+  <div>
+    <h3>Off-plan launch, Instagram carousel</h3>
+    <p>One selling point per slide, in the order a buyer asks: where is it, what can I get, how do I pay, what do I do next.</p>
+  </div>
+  <ol>
+    <li><span>1</span>Hook: the view and the launch</li>
+    <li><span>2</span>Location in minutes</li>
+    <li><span>3</span>Unit types and starting price</li>
+    <li><span>4</span>Payment plan at a glance</li>
+    <li><span>5</span>Deadline and call to action</li>
+  </ol>
+  <p class="swipe">4:5 · 1080 × 1350 · Concept, fictional developer</p>
+</section>
+</body></html>

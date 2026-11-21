@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<!-- Concept: carton and jar label for a fictional skincare line, "Dune & Dew". Render at 1800x1200. -->
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Archivo:wght@400;600;700&family=IBM+Plex+Sans+Arabic:wght@500;700&display=block" rel="stylesheet">
+<style>
+:root{--sand:#e9d6bd;--dune:#c79a6b;--dusk:#6f4e3a;--dew:#9fb7ad;--paper:#fbf7f1;--ink:#2b2320}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1800px;height:1200px;overflow:hidden}
+body{background:#efe7dc;font-family:Archivo,sans-serif;color:var(--ink);display:grid;grid-template-columns:1fr 640px;gap:0}
+.ar{font-family:'IBM Plex Sans Arabic',sans-serif;direction:rtl}
+.serif{font-family:'Instrument Serif',serif}
+.flat{padding:70px 40px 60px 80px;position:relative}
+.flat h2,.side h2{font-size:18px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;opacity:.6;margin-bottom:22px}
+/* the carton flat: glue flap, back, side, front, side; tuck flaps top and bottom */
+.net{position:relative;width:1000px;height:820px}
+.p{position:absolute;background:var(--paper);outline:2px solid var(--dusk);outline-offset:-1px}
+.fold{position:absolute;border-left:2px dashed rgba(111,78,58,.55)}
+.front-art{position:absolute;inset:0;overflow:hidden}
+.front-art .dune1{position:absolute;left:-40px;right:-40px;bottom:-20px;height:250px;background:var(--dune);border-radius:60% 40% 0 0 / 100% 80% 0 0}
+.front-art .dune2{position:absolute;left:-80px;right:20px;bottom:-60px;height:200px;background:var(--dusk);border-radius:50% 70% 0 0 / 100% 100% 0 0}
+.front-art .sun{position:absolute;left:50%;top:250px;width:110px;height:110px;margin-left:-55px;border-radius:50%;background:var(--dew)}
+.front-art .name{position:absolute;left:0;right:0;top:40px;text-align:center}
+.front-art .name b{display:block;font-family:'Instrument Serif',serif;font-weight:400;font-size:64px;line-height:.95}
+.front-art .name .ar{display:block;font-size:26px;font-weight:700;margin-top:6px;text-align:center}
+.front-art .prod{position:absolute;left:0;right:0;top:170px;text-align:center;font-size:17px;line-height:1.5}
+.front-art .prod .ar{display:block;text-align:center;font-size:19px}
+.vol{position:absolute;left:0;right:0;bottom:22px;text-align:center;color:var(--paper);font-weight:700;font-size:16px;z-index:2}
+.small{font-size:13px;line-height:1.55;padding:22px}
+.small .ar{text-align:right;font-size:14px;margin-top:10px}
+.bar{display:flex;gap:2px;height:42px;margin-top:16px}
+.bar i{background:var(--ink)}
+.callout{position:absolute;font-size:14px;color:var(--dusk);font-weight:600}
+.side{background:var(--sand);padding:70px 70px;display:flex;flex-direction:column;justify-content:space-between}
+.mock{display:flex;gap:40px;align-items:flex-end;justify-content:center;height:640px}
+.box3d{position:relative;width:250px;height:460px}
+.box3d .f{position:absolute;left:0;top:30px;width:200px;height:430px;background:var(--paper);overflow:hidden}
+.box3d .s{position:absolute;left:200px;top:30px;width:50px;height:430px;background:#e3d4c2;transform:skewY(-30deg);transform-origin:left top}
+.box3d .t{position:absolute;left:0;top:0;width:250px;height:31px;background:#f3ebdf;clip-path:polygon(0 100%,80% 100%,100% 6%,20% 6%)}
+.jar{position:relative;width:200px;height:220px}
+.jar .lid{position:absolute;left:10px;right:10px;top:0;height:56px;background:var(--dusk);border-radius:10px 10px 4px 4px}
+.jar .body{position:absolute;left:0;right:0;top:50px;bottom:0;background:var(--paper);border-radius:14px;overflow:hidden;text-align:center;padding-top:26px}
+.jar .band{position:absolute;left:0;right:0;bottom:0;height:46px;background:var(--dune)}
+.notes{font-size:19px;line-height:1.55}
+.notes b{font-family:'Instrument Serif',serif;font-weight:400;font-size:44px;display:block;line-height:1;margin-bottom:12px}
+</style></head><body>
+<section class="flat">
+  <h2>Carton dieline, 50 ml face cream</h2>
+  <div class="net">
+    <!-- columns: glue 50 | back 300 | side 110 | front 300 | side 110 ; body height 520, top at 150 -->
+    <div class="p" style="left:0;top:180px;width:50px;height:460px;clip-path:polygon(0 8%,100% 0,100% 100%,0 92%)"></div>
+    <div class="p small" style="left:50px;top:150px;width:300px;height:520px">
+      <b>Directions</b><br>Smooth a pea-sized amount over clean skin, morning and night. For external use only.
+      <p class="ar">يوضع على بشرة نظيفة صباحاً ومساءً. للاستعمال الخارجي فقط.</p>
+      <br><b>Ingredients</b><br>Aqua, squalane, glycerin, date seed oil, niacinamide, ceramide NP, panthenol, sodium hyaluronate.
+      <div class="bar" aria-hidden="true"><i style="width:3px"></i><i style="width:1px"></i><i style="width:2px"></i><i style="width:4px"></i><i style="width:1px"></i><i style="width:3px"></i><i style="width:2px"></i><i style="width:1px"></i><i style="width:4px"></i><i style="width:2px"></i><i style="width:1px"></i><i style="width:3px"></i><i style="width:1px"></i><i style="width:2px"></i><i style="width:4px"></i><i style="width:1px"></i><i style="width:3px"></i><i style="width:2px"></i><i style="width:1px"></i><i style="width:3px"></i></div>
+    </div>
+    <div class="p" style="left:350px;top:150px;width:110px;height:520px;background:var(--dew)"></div>
+    <div class="p" style="left:460px;top:150px;width:300px;height:520px">
+      <div class="front-art"><div class="sun"></div><div class="dune1"></div><div class="dune2"></div>
+        <div class="name"><b>Dune &amp; Dew</b><span class="ar">كثبان وندى</span></div>
+        <div class="prod">Barrier face cream<span class="ar">كريم مرطب للوجه</span></div>
+      </div>
+      <div class="vol">50 ml &nbsp;·&nbsp; <span dir="rtl" lang="ar">٥٠ مل</span></div>
+    </div>
+    <div class="p" style="left:760px;top:150px;width:110px;height:520px;background:var(--dew)"></div>
+    <!-- tuck flaps -->
+    <div class="p" style="left:460px;top:40px;width:300px;height:110px;border-radius:40px 40px 0 0"></div>
+    <div class="p" style="left:460px;top:670px;width:300px;height:110px;border-radius:0 0 40px 40px"></div>
+    <div class="p" style="left:350px;top:100px;width:110px;height:50px;clip-path:polygon(10% 0,90% 0,100% 100%,0 100%)"></div>
+    <div class="p" style="left:760px;top:100px;width:110px;height:50px;clip-path:polygon(10% 0,90% 0,100% 100%,0 100%)"></div>
+    <div class="p" style="left:350px;top:670px;width:110px;height:50px;clip-path:polygon(0 0,100% 0,90% 100%,10% 100%)"></div>
+    <div class="p" style="left:760px;top:670px;width:110px;height:50px;clip-path:polygon(0 0,100% 0,90% 100%,10% 100%)"></div>
+    <span class="callout" style="left:880px;top:390px">Cut line ——</span>
+    <span class="callout" style="left:880px;top:420px">Fold - - - -</span>
+  </div>
+</section>
+<section class="side">
+  <h2>Shelf view</h2>
+  <div class="mock">
+    <div class="box3d"><div class="t"></div><div class="f"><div class="front-art" style="transform:scale(.667);transform-origin:top left;width:300px;height:645px"><div class="sun"></div><div class="dune1"></div><div class="dune2"></div><div class="name"><b>Dune &amp; Dew</b><span class="ar">كثبان وندى</span></div><div class="prod">Barrier face cream<span class="ar">كريم مرطب للوجه</span></div></div></div><div class="s" style="background:var(--dew)"></div></div>
+    <div class="jar"><div class="lid"></div><div class="body"><div><b class="serif" style="font-size:34px;font-weight:400;line-height:1">Dune &amp; Dew</b><div class="ar" style="font-size:16px;text-align:center">كثبان وندى</div></div><div class="band"></div></div></div>
+  </div>
+  <p class="notes"><b>Warm sand, cool dew.</b>A desert palette for a skincare line that keeps moisture in. Bilingual front panel, ingredients and directions on the back, and a jar label that matches the carton.</p>
+  <p style="font-size:15px;opacity:.6;margin-top:16px">Concept, fictional brand</p>
+</section>
+</body></html>

@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<!-- Concept: stationery set for a fictional property agency, "Northpoint Realty". Render at 1800x1150. -->
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=IBM+Plex+Sans+Arabic:wght@500;700&display=block" rel="stylesheet">
+<style>
+:root{--navy:#14213d;--brass:#c9a227;--stone:#e6e2da;--paper:#fdfcf9;--ink:#1a1f2b}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1800px;height:1150px;overflow:hidden}
+body{background:var(--stone);font-family:Archivo,sans-serif;color:var(--ink);position:relative}
+.ar{font-family:'IBM Plex Sans Arabic',sans-serif;direction:rtl}
+.shadow{box-shadow:0 2px 4px rgba(20,33,61,.12),0 18px 40px rgba(20,33,61,.18)}
+.mark{display:inline-flex;align-items:center;gap:16px}
+.mark svg{flex:none}
+.wm{font-weight:800;font-variation-settings:'wdth' 112;letter-spacing:.02em;line-height:.95}
+.wm small{display:block;font-weight:500;font-variation-settings:'wdth' 100;letter-spacing:.24em;font-size:.36em;margin-top:6px}
+/* letterhead A4, scaled */
+.letter{position:absolute;left:110px;top:90px;width:700px;height:990px;background:var(--paper);padding:64px 64px;transform:rotate(-2deg)}
+.letter .head{display:flex;justify-content:space-between;align-items:flex-start;padding-bottom:28px;border-bottom:3px solid var(--brass)}
+.letter .head .ar{font-size:20px;font-weight:700;color:var(--navy);margin-top:8px}
+.letter .body{margin-top:56px;font-size:16px;line-height:1.7;color:#3b4252}
+.letter .body p{margin-bottom:16px}
+.letter .ln{height:10px;background:#eceae4;border-radius:5px;margin:14px 0}
+.letter .foot{position:absolute;left:64px;right:64px;bottom:54px;display:flex;justify-content:space-between;font-size:13px;color:#5b6272}
+/* business cards */
+.card{position:absolute;width:525px;height:320px}
+.card.front{left:930px;top:120px;background:var(--navy);color:var(--paper);display:flex;flex-direction:column;justify-content:space-between;padding:42px 46px;transform:rotate(4deg)}
+.card.front .ar{font-size:22px;font-weight:700;color:var(--brass);text-align:left}
+.card.back{left:1010px;top:500px;background:var(--paper);padding:40px 46px;display:flex;flex-direction:column;justify-content:space-between;transform:rotate(-3deg)}
+.card.back .nm{font-size:30px;font-weight:800;font-variation-settings:'wdth' 108;color:var(--navy)}
+.card.back .role{font-size:16px;color:#5b6272;margin-top:4px}
+.card.back .lines{font-size:16px;line-height:1.75}
+.card.back .lines span{color:var(--brass);font-weight:700;display:inline-block;width:22px}
+.card.back .rule{height:4px;width:60px;background:var(--brass)}
+/* compliments slip / envelope */
+.env{position:absolute;left:1240px;top:900px;width:480px;height:200px;background:var(--navy);transform:rotate(2deg);overflow:hidden}
+.env::before{content:"";position:absolute;left:0;right:0;top:0;height:120px;background:#1b2c52;clip-path:polygon(0 0,100% 0,50% 100%)}
+.env .seal{position:absolute;left:50%;top:92px;width:56px;height:56px;margin-left:-28px;border-radius:50%;background:var(--brass);display:grid;place-items:center}
+.label{position:absolute;font-size:15px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#6b6f78}
+.tagline{position:absolute;left:930px;top:900px;width:280px;font-size:15px;line-height:1.5;color:#4b5162}
+.tagline b{display:block;font-size:26px;font-weight:800;font-variation-settings:'wdth' 108;color:var(--navy);margin-bottom:8px;line-height:1.1}
+</style></head><body>
+<!-- the mark: a roof line that doubles as an N and a north arrow -->
+<svg width="0" height="0" style="position:absolute"><defs>
+  <symbol id="np" viewBox="0 0 60 60"><path d="M8 52 V22 L30 6 L52 22 V52" fill="none" stroke="currentColor" stroke-width="5" stroke-linejoin="round"/><path d="M19 52 V28 L41 48 V24" fill="none" stroke="#c9a227" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/></symbol>
+</defs></svg>
+
+<article class="letter shadow">
+  <div class="head">
+    <div class="mark" style="color:#14213d"><svg width="58" height="58"><use href="#np"/></svg><div class="wm" style="font-size:30px;color:#14213d">NORTHPOINT<small>REALTY</small></div></div>
+    <div style="text-align:right"><div class="ar">نورث بوينت للعقارات</div><div style="font-size:13px;color:#5b6272;margin-top:6px">Sales · Leasing · Property care</div></div>
+  </div>
+  <div class="body">
+    <p style="color:#1a1f2b;font-weight:600">21 November 2026</p>
+    <div class="ln" style="width:42%"></div><div class="ln" style="width:30%"></div>
+    <div style="height:24px"></div>
+    <div class="ln"></div><div class="ln"></div><div class="ln" style="width:88%"></div><div class="ln"></div><div class="ln" style="width:64%"></div>
+    <div style="height:18px"></div>
+    <div class="ln"></div><div class="ln" style="width:92%"></div><div class="ln" style="width:70%"></div>
+  </div>
+  <div class="foot"><span>northpoint.example</span><span>+971 2 000 0000</span><span>Abu Dhabi, UAE</span></div>
+</article>
+<p class="label" style="left:118px;top:48px">Letterhead, A4</p>
+
+<div class="card front shadow">
+  <div class="mark" style="color:#fdfcf9"><svg width="70" height="70"><use href="#np"/></svg><div class="wm" style="font-size:40px">NORTHPOINT<small>REALTY</small></div></div>
+  <div style="display:flex;justify-content:space-between;align-items:end"><span style="font-size:15px;letter-spacing:.06em;opacity:.8">Find your north.</span><span class="ar">نورث بوينت للعقارات</span></div>
+</div>
+<div class="card back shadow">
+  <div><div class="nm">Your Name</div><div class="role">Senior Property Consultant</div></div>
+  <div class="rule"></div>
+  <div class="lines"><div><span>T</span>+971 50 000 0000</div><div><span>E</span>name@northpoint.example</div><div><span>W</span>northpoint.example</div></div>
+</div>
+<p class="label" style="left:932px;top:68px">Business card, 90 × 55 mm</p>
+
+<div class="tagline"><b>Find your north.</b>A roof line that doubles as an N and a compass point, in navy and brass. Concept, fictional brand.</div>
+<div class="env shadow"><span class="seal"><svg width="34" height="34" style="color:#14213d"><use href="#np"/></svg></span></div>
+</body></html>
