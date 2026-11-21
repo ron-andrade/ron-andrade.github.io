@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<!-- Concept: launch website for "Saltwater Residences" by the fictional developer "Corallo".
+     Responsive; rendered at 1440 wide (desktop) and 390 wide (phone). -->
+<title>Saltwater Residences by Corallo</title>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,500;6..96,700&family=Archivo:wght@400;500;600;700;800&display=block" rel="stylesheet">
+<style>
+:root{--sea:#0d3b3f;--sea2:#12565b;--sand:#efe6d6;--coral:#e8664a;--foam:#fbf8f2;--ink:#0b2224}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--foam);color:var(--ink);font-family:Archivo,sans-serif;font-size:17px;line-height:1.55}
+.serif{font-family:'Bodoni Moda',serif}
+.wrap{max-width:1240px;margin:0 auto;padding:0 40px}
+nav{position:absolute;left:0;right:0;top:0;z-index:2}
+nav .wrap{display:flex;justify-content:space-between;align-items:center;height:84px;color:var(--foam)}
+.logo{display:flex;align-items:center;gap:10px;font-weight:700;letter-spacing:.2em;font-size:15px}
+.logo svg{width:28px;height:28px}
+nav ul{display:flex;gap:32px;list-style:none;font-weight:500;font-size:15px}
+.btn{display:inline-flex;align-items:center;gap:10px;background:var(--coral);color:#fff;font-weight:700;padding:14px 24px;border-radius:999px;font-size:15px}
+.btn.ghost{background:transparent;box-shadow:inset 0 0 0 1.5px currentColor}
+/* hero */
+.hero{position:relative;background:var(--sea);color:var(--foam);min-height:760px;overflow:hidden}
+.hero .wrap{position:relative;z-index:1;padding-top:170px}
+.tag{display:inline-block;background:rgba(251,248,242,.12);border-radius:999px;padding:8px 16px;font-size:14px;font-weight:600;letter-spacing:.04em}
+.hero h1{font-family:'Bodoni Moda',serif;font-weight:500;font-size:104px;line-height:.95;margin-top:24px;max-width:9ch}
+.hero h1 em{color:var(--coral)}
+.hero p{font-size:20px;max-width:34ch;margin-top:22px;opacity:.9}
+.hero .ctas{display:flex;gap:12px;margin-top:34px}
+.scene{position:absolute;right:-40px;bottom:0;width:820px;height:640px}
+/* facts */
+.facts{background:var(--sand)}
+.facts .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;padding-top:44px;padding-bottom:44px}
+.facts b{display:block;font-family:'Bodoni Moda',serif;font-size:44px;line-height:1;color:var(--sea)}
+.facts span{font-size:15px;font-weight:600}
+/* residences */
+section.block{padding:110px 0}
+.head{display:flex;justify-content:space-between;align-items:end;gap:40px;margin-bottom:44px}
+.head h2{font-family:'Bodoni Moda',serif;font-weight:500;font-size:60px;line-height:1}
+.head p{max-width:40ch}
+.units{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.unit{background:#fff;border-radius:18px;overflow:hidden;min-width:0}
+.unit .pic svg{display:block;width:100%;height:100%}
+html,body{overflow-x:hidden}
+.unit .pic{height:220px;position:relative}
+.unit .body{padding:24px}
+.unit h3{font-family:'Bodoni Moda',serif;font-weight:500;font-size:30px}
+.unit .meta{display:flex;justify-content:space-between;margin-top:14px;font-weight:600;font-size:15px}
+.unit .meta b{color:var(--coral)}
+/* plan */
+.plan{background:var(--sea2);color:var(--foam)}
+.plan .grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.plan h2{font-family:'Bodoni Moda',serif;font-weight:500;font-size:60px;line-height:1}
+.plan .big{font-family:'Bodoni Moda',serif;font-size:160px;line-height:.85;color:var(--sand)}
+.plan .big span{color:var(--coral)}
+.bar{display:flex;height:20px;border-radius:10px;overflow:hidden;margin-top:28px}
+.steps{display:grid;grid-template-columns:1fr 1.3fr 1fr;gap:12px;margin-top:14px;font-size:15px}
+.steps b{display:block;font-size:24px}
+/* register */
+.reg .grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start}
+.form{background:#fff;border-radius:20px;padding:32px;display:grid;gap:14px}
+.field{background:var(--foam);border-radius:12px;padding:16px 18px;font-size:15px;color:#6b7a7a}
+.form .btn{justify-content:center;margin-top:6px}
+footer{background:var(--ink);color:var(--sand);padding:40px 0;font-size:14px}
+footer .wrap{display:flex;justify-content:space-between}
+@media (max-width:700px){
+  .wrap{padding:0 20px}
+  nav ul{display:none}
+  nav .btn{padding:10px 16px;font-size:13px}
+  .units>*,.grid>*{min-width:0}
+  .hero{min-height:860px}
+  .hero .wrap{padding-top:120px}
+  .hero h1{font-size:56px}
+  .hero p{font-size:17px}
+  .hero .ctas{flex-direction:column;align-items:flex-start}
+  .scene{width:420px;height:328px;right:-70px}
+  .facts .wrap{grid-template-columns:1fr 1fr;gap:20px;padding-top:30px;padding-bottom:30px}
+  .facts b{font-size:32px}
+  section.block{padding:64px 0}
+  .head{flex-direction:column;align-items:flex-start;gap:12px}
+  .head h2,.plan h2{font-size:40px}
+  .units,.plan .grid,.reg .grid{grid-template-columns:1fr}
+  .plan .big{font-size:110px}
+  footer .wrap{flex-direction:column;gap:8px}
+}
+</style></head><body>
+<svg width="0" height="0" style="position:absolute"><defs>
+  <symbol id="co" viewBox="0 0 40 40"><path d="M20 4 C30 12 30 28 20 36 C10 28 10 12 20 4 Z" fill="none" stroke="currentColor" stroke-width="3"/><path d="M20 12 V30 M14 18 L20 24 L26 18" fill="none" stroke="#e8664a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="towers" viewBox="0 0 820 640">
+    <circle cx="620" cy="190" r="110" fill="#e8664a"/>
+    <g fill="#efe6d6"><rect x="200" y="140" width="130" height="400" rx="6"/><rect x="350" y="40" width="150" height="500" rx="6"/><rect x="520" y="200" width="110" height="340" rx="6"/></g>
+    <g fill="#0d3b3f" opacity=".3">
+      <rect x="226" y="180" width="78" height="10"/><rect x="226" y="214" width="78" height="10"/><rect x="226" y="248" width="78" height="10"/><rect x="226" y="282" width="78" height="10"/><rect x="226" y="316" width="78" height="10"/><rect x="226" y="350" width="78" height="10"/><rect x="226" y="384" width="78" height="10"/>
+      <rect x="378" y="80" width="94" height="10"/><rect x="378" y="114" width="94" height="10"/><rect x="378" y="148" width="94" height="10"/><rect x="378" y="182" width="94" height="10"/><rect x="378" y="216" width="94" height="10"/><rect x="378" y="250" width="94" height="10"/><rect x="378" y="284" width="94" height="10"/><rect x="378" y="318" width="94" height="10"/><rect x="378" y="352" width="94" height="10"/><rect x="378" y="386" width="94" height="10"/>
+      <rect x="542" y="240" width="66" height="10"/><rect x="542" y="274" width="66" height="10"/><rect x="542" y="308" width="66" height="10"/><rect x="542" y="342" width="66" height="10"/>
+    </g>
+    <path d="M0 520 C160 496 300 540 460 520 S700 500 820 524 L820 640 L0 640 Z" fill="#12565b"/>
+    <path d="M0 580 C180 560 340 600 520 580 S740 566 820 584 L820 640 L0 640 Z" fill="#0b2f33"/>
+  </symbol>
+</defs></svg>
+
+<nav><div class="wrap"><span class="logo"><svg><use href="#co"/></svg>CORALLO</span><ul><li>Residences</li><li>Location</li><li>Payment plan</li><li>Gallery</li></ul><span class="btn">Register interest</span></div></nav>
+
+<header class="hero">
+  <div class="wrap">
+    <span class="tag">Now launching · Marsa Island</span>
+    <h1>Wake up to the <em>sea</em>.</h1>
+    <p>Saltwater Residences: one, two and three bedroom apartments a two-minute walk from the beach.</p>
+    <div class="ctas"><span class="btn">Register interest →</span><span class="btn ghost">Download brochure</span></div>
+  </div>
+  <svg class="scene" aria-hidden="true"><use href="#towers"/></svg>
+</header>
+
+<section class="facts"><div class="wrap">
+  <div><b>AED 1.2M</b><span>Starting price</span></div>
+  <div><b>60/40</b><span>Payment plan</span></div>
+  <div><b>Q4 2028</b><span>Handover</span></div>
+  <div><b>2 min</b><span>Walk to the beach</span></div>
+</div></section>
+
+<section class="block"><div class="wrap">
+  <div class="head"><h2>The residences</h2><p>Every apartment faces the water, with a balcony deep enough for breakfast outside.</p></div>
+  <div class="units">
+    <article class="unit"><div class="pic" style="background:#e7f1f0"><svg viewBox="0 0 400 220" width="100%" height="100%" preserveAspectRatio="xMidYMid slice"><rect x="40" y="40" width="320" height="140" fill="#fff" stroke="#0b2224" stroke-width="5"/><path d="M200 40 V180 M40 120 H200" stroke="#0b2224" stroke-width="4"/><rect x="40" y="180" width="320" height="16" fill="#7fb3ae"/></svg></div><div class="body"><h3>1 bedroom</h3><div class="meta"><span>From 780 sq ft</span><b>AED 1.2M</b></div></div></article>
+    <article class="unit"><div class="pic" style="background:#efe6d6"><svg viewBox="0 0 400 220" width="100%" height="100%" preserveAspectRatio="xMidYMid slice"><rect x="30" y="30" width="340" height="160" fill="#fff" stroke="#0b2224" stroke-width="5"/><path d="M150 30 V190 M150 110 H370 M30 110 H150 M280 110 V190" stroke="#0b2224" stroke-width="4"/><rect x="150" y="190" width="220" height="16" fill="#7fb3ae"/></svg></div><div class="body"><h3>2 bedroom</h3><div class="meta"><span>From 1,240 sq ft</span><b>AED 1.9M</b></div></div></article>
+    <article class="unit"><div class="pic" style="background:#f6dcd3"><svg viewBox="0 0 400 220" width="100%" height="100%" preserveAspectRatio="xMidYMid slice"><rect x="20" y="24" width="360" height="170" fill="#fff" stroke="#0b2224" stroke-width="5"/><path d="M120 24 V194 M240 24 V110 M120 110 H380 M20 110 H120 M300 110 V194" stroke="#0b2224" stroke-width="4"/><rect x="120" y="194" width="260" height="16" fill="#7fb3ae"/></svg></div><div class="body"><h3>3 bedroom</h3><div class="meta"><span>From 1,860 sq ft</span><b>AED 2.7M</b></div></div></article>
+  </div>
+</div></section>
+
+<section class="block plan"><div class="wrap grid">
+  <div><h2>Pay as it rises.</h2><p style="margin-top:18px;max-width:36ch;opacity:.85">Ten percent to book, half while it is built, the rest when you get the keys.</p></div>
+  <div><p class="big">60<span>/</span>40</p><div class="bar"><i style="flex:10;background:#e8664a"></i><i style="flex:50;background:#efe6d6"></i><i style="flex:40;background:#7fb3ae"></i></div>
+  <div class="steps"><span><b>10%</b>on booking</span><span><b>50%</b>during construction</span><span><b>40%</b>on handover</span></div></div>
+</div></section>
+
+<section class="block reg"><div class="wrap grid">
+  <div><h2 class="serif" style="font-weight:500;font-size:60px;line-height:1">Launch prices end 30 December.</h2><p style="margin-top:18px;max-width:36ch">Leave your details and a consultant will send the floor plans and the full price list.</p></div>
+  <div class="form"><div class="field">Full name</div><div class="field">Mobile number</div><div class="field">Email</div><div class="field">Apartment type</div><span class="btn">Register interest</span></div>
+</div></section>
+
+<footer><div class="wrap"><span>Corallo · Saltwater Residences, Marsa Island</span><span>Permit no. 0000000 · Concept, fictional developer</span></div></footer>
+</body></html>

@@ -1,0 +1,4 @@
+<!doctype html><meta charset="utf-8">
+<!-- Renders a page at a true 390 px phone width: headless Chrome will not size a window below ~500 px. Use: phone-frame.html?src=page.html -->
+<style>html,body{margin:0;background:#fff}iframe{display:block;border:0;width:390px;height:4400px}</style>
+<iframe id="f"></iframe><script>document.getElementById('f').src=new URLSearchParams(location.search).get('src')</script>

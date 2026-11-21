@@ -1,0 +1,34 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<!-- Presents a website concept: a desktop browser window and a phone, from screenshots in shots/.
+     Use: web-showcase.html?n=11&bg=%23e9e1d2&title=...&sub=...  Render at 2000x1240. -->
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;800&display=block" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:2000px;height:1240px;overflow:hidden}
+body{font-family:Archivo,sans-serif;color:#1b1b1b;position:relative}
+.head{position:absolute;left:80px;top:60px;right:80px;display:flex;justify-content:space-between;align-items:end}
+.head h1{font-size:46px;font-weight:800;letter-spacing:-.02em}
+.head p{font-size:20px;max-width:46ch;text-align:right;line-height:1.4;opacity:.8}
+.browser{position:absolute;left:80px;top:170px;width:1340px;border-radius:16px;overflow:hidden;background:#fff;box-shadow:0 30px 70px rgba(0,0,0,.22)}
+.bar{height:46px;background:#f1f0ee;display:flex;align-items:center;gap:8px;padding:0 18px}
+.bar i{width:13px;height:13px;border-radius:50%;background:#d6d4d0}
+.bar span{margin-left:20px;background:#fff;border-radius:8px;padding:6px 16px;font-size:14px;color:#77736c;width:420px}
+.browser img{display:block;width:100%}
+.phone{position:absolute;right:110px;top:230px;width:420px;padding:15px;border-radius:58px;background:#151515;box-shadow:0 30px 70px rgba(0,0,0,.3)}
+.phone img{display:block;width:100%;border-radius:44px}
+.notch{position:absolute;left:50%;top:21px;width:96px;height:22px;margin-left:-48px;border-radius:20px;background:#151515}
+.tag{position:absolute;left:80px;bottom:44px;font-size:16px;font-weight:600;opacity:.7}
+</style></head><body>
+<div class="head"><h1 id="t"></h1><p id="s"></p></div>
+<div class="browser"><div class="bar"><i></i><i></i><i></i><span id="u"></span></div><img id="d" alt=""></div>
+<div class="phone"><img id="m" alt=""><span class="notch"></span></div>
+<p class="tag">Desktop and mobile · concept, fictional brand</p>
+<script>
+const q=new URLSearchParams(location.search), n=q.get('n');
+document.body.style.background=q.get('bg');
+document.getElementById('t').textContent=q.get('title');
+document.getElementById('s').textContent=q.get('sub');
+document.getElementById('u').textContent=q.get('url');
+document.getElementById('d').src=`shots/${n}-desktop.png`;
+document.getElementById('m').src=`shots/${n}-phone.png`;
+</script></body></html>
