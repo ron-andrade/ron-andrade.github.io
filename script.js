@@ -305,7 +305,7 @@ const filmGroups = [
         {
           title: 'Print shop, bilingual services promo',
           kind: 'Promo film', length: '60 sec', format: '16:9', lang: 'English and Arabic',
-          desc: 'A service-by-service walkthrough for a print shop, from offset and wide-format printing to custom boxes and invitations, with every line set in both English and Arabic.',
+          desc: 'A service-by-service walkthrough for a print shop: offset printing, wide format, stickers and decals, invitations and graphic design, then why to choose them, where to find the shop and how to get in touch. Every line is set in both English and Arabic.',
           src: 'videos/dixie-bilingual-promo.mp4', preview: 'videos/previews/dixie-bilingual-promo.mp4', poster: 'images/motion/dixie-bilingual-promo.jpg',
           ratio: 16 / 9,
         },
@@ -322,7 +322,7 @@ const filmGroups = [
   {
     id: 'social-ads',
     title: 'Social ads',
-    note: 'Vertical pieces made for Instagram Reels and TikTok.',
+    note: 'Vertical and feed ads made for Instagram, Reels and TikTok, in English and Arabic.',
     rows: [
       [
         {
@@ -331,6 +331,20 @@ const filmGroups = [
           desc: 'A vertical ad that plays like an app: upload your artwork, pick a product, get a quote. Built for Instagram Reels and TikTok.',
           src: 'videos/dixie-profile-ad-vertical.mp4', preview: 'videos/previews/dixie-profile-ad-vertical.mp4', poster: 'images/motion/dixie-profile-ad-vertical.jpg',
           ratio: 9 / 16,
+        },
+        {
+          title: 'Print shop, services reel',
+          kind: 'Social ad', length: '18 sec', format: '9:16', lang: 'English and Arabic',
+          desc: 'A fast vertical reel: the services slide past one by one, the shop feed shows more of the work, and it closes on a WhatsApp call to action.',
+          src: 'videos/dixie-reel-vertical.mp4', preview: 'videos/previews/dixie-reel-vertical.mp4', poster: 'images/motion/dixie-reel-vertical.jpg',
+          ratio: 9 / 16,
+        },
+        {
+          title: 'Print shop, neon city feed ad',
+          kind: 'Social ad', length: '10 sec', format: '4:5', lang: 'English and Arabic',
+          desc: 'A neon night-city feed ad: the headline lights up, the service list builds in and the contact line lands, with an Arabic tagline at the foot.',
+          src: 'videos/dixie-neon-feed-ad.mp4', preview: 'videos/previews/dixie-neon-feed-ad.mp4', poster: 'images/motion/dixie-neon-feed-ad.jpg',
+          ratio: 4 / 5,
         },
       ],
     ],
@@ -554,6 +568,7 @@ filmsEl.addEventListener('click', e => {
 });
 $('#reelSound').addEventListener('click', () => openFilm(reelFilm));
 filmDialog.addEventListener('close', () => {
+  if (filmDialog.open) return; // a new film was opened right after closing
   stage.innerHTML = '';
   if (!reduceMotion && !saveData && reelToggle.getAttribute('aria-pressed') === 'false') reel.play().catch(() => {});
 });
